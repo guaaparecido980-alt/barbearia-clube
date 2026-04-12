@@ -19,6 +19,8 @@
 <!-- ② Canônico, robots, geo -->
 <link rel="canonical" href="https://www.barbeariaclube.com.br/">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080a10">
+<meta name="msapplication-TileColor" content="#c5a059">
 <meta name="author" content="Barbearia Clube">
 <meta name="geo.region" content="BR-PR">
 <meta name="geo.placename" content="Curitiba, Mercês">
@@ -45,6 +47,7 @@
 <meta name="twitter:description" content="Barba na navalha, visagismo e Dia do Noivo VIP nas Mercês. Agende pelo WhatsApp!">
 
 <!-- Fontes & Ícones -->
+<!-- Preload de recursos críticos para performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -115,16 +118,54 @@
     "@type": "OfferCatalog",
     "name": "Serviços Barbearia Clube",
     "itemListElement": [
-      { "@type": "Offer", "name": "Visagismo Masculino",  "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Corte",                "price": "115", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Cabelo + Barba",       "price": "180", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Barba Completa",       "price": "80",  "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Massagem Relaxante",   "price": "120", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Podologia Completa",   "price": "135", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Dia do Noivo Bronze",  "price": "450", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Dia do Noivo Prata",   "price": "560", "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Dia do Noivo Ouro",    "price": "730", "priceCurrency": "BRL" }
+      { "@type": "Offer", "name": "Visagismo Masculino",      "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Corte",                    "price": "115", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Passada de Máquina",       "price": "60",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Tintura",                  "price": "100", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Cabelo + Barba",           "price": "180", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Barba Completa",           "price": "80",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Barba Máquina",            "price": "80",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Massagem Relaxante",       "price": "120", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Massagem Terapêutica",     "price": "140", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Faxina na Cara",           "price": "130", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Podologia Completa",       "price": "135", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Manicure",                 "price": "35",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Pedicure",                 "price": "45",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Manicure + Pedicure",      "price": "80",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Dia do Noivo Bronze",      "price": "450", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Dia do Noivo Prata",       "price": "560", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Dia do Noivo Ouro",        "price": "730", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" }
     ]
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Marcos P." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Ambiente sofisticado e profissionais experientes. Perez e Adriano são lendas."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Roberto S." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Barba na navalha à moda antiga, toalha quente... Uma experiência terapêutica. Adriano é mestre."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "André L." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Além do corte e barba impecáveis, a massagem relaxante é incrível. Momento de autocuidado que todo homem merece."
+    }
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/554130149413",
+      "inLanguage": "pt-BR",
+      "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]
+    },
+    "result": { "@type": "Reservation", "name": "Agendamento Barbearia Clube" }
   }
 }
 </script>
@@ -825,7 +866,139 @@ ul { list-style: none; }
   .map-embed { height: 140px; }
   .cookie-banner { padding-bottom: 80px; }
 }
+
+/* ════════════════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════════════ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 0;
+  border: 1px solid rgba(197,160,89,.15);
+}
+.faq-item {
+  border-bottom: 1px solid rgba(197,160,89,.12);
+}
+.faq-item:nth-child(odd) { border-right: 1px solid rgba(197,160,89,.12); }
+.faq-item:last-child, .faq-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 28px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.faq-q:hover { background: rgba(197,160,89,.04); color: var(--gold); }
+.faq-q[aria-expanded="true"] { color: var(--gold); }
+.faq-icon {
+  color: var(--gold);
+  font-size: 13px;
+  flex-shrink: 0;
+  transition: transform .3s;
+}
+.faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding: 0 28px 22px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  border-top: 1px solid rgba(197,160,89,.08);
+}
+.faq-a.open { display: block; }
+.faq-a strong { color: var(--gray); }
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq-item:nth-child(odd) { border-right: none; }
+  .faq-item { border-bottom: 1px solid rgba(197,160,89,.12); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { padding: 18px 20px; font-size: 14px; }
+  .faq-a { padding: 0 20px 18px; }
+}
 </style>
+
+<!-- FAQ Schema — Rich Snippet no Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Onde fica a Barbearia Clube em Curitiba?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Barbearia Clube fica na Rua Jacarezinho, 21, no bairro Mercês, em Curitiba-PR. Atendemos de segunda a sábado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o horário de funcionamento da Barbearia Clube?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Segunda-feira: 13h às 19h. Terça a Sexta: 09h às 19h. Sábado: 09h às 17h. Domingo: fechado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como agendar na Barbearia Clube?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agendamentos são feitos exclusivamente pelo WhatsApp: (41) 3014-9413. Resposta rápida e confirmação imediata."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Barbearia Clube faz pacote Dia do Noivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim! Oferecemos 3 pacotes Dia do Noivo: Bronze (R$450), Prata (R$560) e Ouro (R$730), com corte, barba, hidratação, massagem, podologia e muito mais. Agende pelo WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o preço do corte na Barbearia Clube?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O corte custa R$115. Cabelo + Barba completo sai por R$180. Também oferecemos passada de máquina por R$60. Confira nossa tabela completa de serviços no site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Barbearia Clube oferece serviços de estética e bem-estar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim! Além de corte e barba, oferecemos massagem relaxante (R$120), massagem terapêutica (R$140), podologia (R$135), manicure, pedicure, faxina na cara e depilação. Um espaço completo de cuidados masculinos."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.barbeariaclube.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.barbeariaclube.com.br/#servicos" },
+    { "@type": "ListItem", "position": 3, "name": "Dia do Noivo", "item": "https://www.barbeariaclube.com.br/#noivo" },
+    { "@type": "ListItem", "position": 4, "name": "Nossa Equipe", "item": "https://www.barbeariaclube.com.br/#equipe" }
+  ]
+}
+</script>
+
 </head>
 
 <body>
@@ -1427,6 +1600,84 @@ ul { list-style: none; }
 </section>
 
 <!-- ══════════════════════════════════════════════
+     SEÇÃO FAQ — Perguntas Frequentes
+     (Gera rich snippets no Google)
+════════════════════════════════════════════════ -->
+<section class="section section--black" aria-label="Perguntas Frequentes">
+  <div class="container">
+    <div class="sh fi">
+      <span class="sh__tag">Tire suas dúvidas</span>
+      <h2 class="sh__title">Perguntas Frequentes</h2>
+      <div class="sh__rule"></div>
+    </div>
+    <div class="faq-grid fi">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Onde fica a Barbearia Clube?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p>Estamos na <strong>Rua Jacarezinho, 21 — Mercês, Curitiba/PR</strong>. Fácil acesso e estacionamento na região.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Quais são os horários de funcionamento?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p><strong>Segunda:</strong> 13h às 19h &nbsp;|&nbsp; <strong>Ter–Sex:</strong> 09h às 19h &nbsp;|&nbsp; <strong>Sábado:</strong> 09h às 17h &nbsp;|&nbsp; <strong>Domingo:</strong> Fechado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Como faço para agendar?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p>Agendamentos <strong>exclusivamente pelo WhatsApp</strong>: <a href="https://wa.me/554130149413" style="color:var(--gold);">(41) 3014-9413</a>. Resposta rápida e confirmação imediata.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Vocês fazem pacote Dia do Noivo?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p>Sim! Temos 3 pacotes: <strong>Bronze (R$450)</strong>, <strong>Prata (R$560)</strong> e <strong>Ouro (R$730)</strong> — com corte, barba, hidratação, massagem, podologia e muito mais. Perfeito para o grande dia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Qual o preço do corte e da barba?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p>Corte: <strong>R$115</strong>. Barba completa: <strong>R$80</strong>. Cabelo + Barba juntos: <strong>R$180</strong>. Passada de máquina: <strong>R$60</strong>. Confira a tabela completa na seção de serviços.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Além de corte e barba, que outros serviços oferecem?</span>
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-a">
+          <p>Somos um espaço completo de cuidados masculinos: <strong>massoterapia</strong>, <strong>podologia</strong>, <strong>manicure</strong>, <strong>pedicure</strong>, <strong>depilação</strong>, <strong>faxina na cara</strong> e <strong>visagismo</strong>. Tudo sob o mesmo teto.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
      ETAPA 3 — CTA WHATSAPP EXCLUSIVO
 ════════════════════════════════════════════════ -->
 <section id="agendar" class="booking">
@@ -1546,7 +1797,7 @@ ul { list-style: none; }
   <div class="footer__bot">
     <div class="container">
       <div class="footer__bot-inner">
-        <p class="footer__copy">© 2025 Barbearia Clube. Todos os direitos reservados.</p>
+        <p class="footer__copy">© 2025 Barbearia Clube. Todos os direitos reservados. &nbsp;|&nbsp; <a href="politica-de-privacidade.html" style="color:var(--faint);font-size:11px;" target="_blank" rel="noopener noreferrer">Privacidade</a> &nbsp;|&nbsp; <a href="politica-de-cookies.html" style="color:var(--faint);font-size:11px;" target="_blank" rel="noopener noreferrer">Cookies</a></p>
         <p class="footer__tagline">A barbearia mais experiente de Curitiba.</p>
       </div>
     </div>
@@ -1647,9 +1898,9 @@ function toggleMute(btn) {
 ════════════════════════════════════════════════ -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimento de cookies" aria-live="polite">
   <p class="cookie-banner__text">
-    Utilizamos cookies para melhorar sua experiência e analisar o tráfego do site.
-    Ao continuar navegando, você concorda com nossa
-    <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+    Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa
+    <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+    e <a href="politica-de-cookies.html" target="_blank" rel="noopener noreferrer">Política de Cookies</a>.
   </p>
   <div class="cookie-banner__actions">
     <button class="cookie-btn cookie-btn--decline" onclick="declineCookies()" aria-label="Recusar cookies">Recusar</button>
