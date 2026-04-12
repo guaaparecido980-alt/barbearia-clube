@@ -976,27 +976,38 @@ ul { list-style: none; }
 }
 .app-strip__sub { font-size: 13px; color: var(--muted); line-height: 1.6; }
 .app-strip__btns {
-  display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap;
+  display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; align-items: center;
 }
 .app-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--black);
-  border: 1px solid rgba(197,160,89,.4);
-  padding: 12px 20px;
-  color: var(--white);
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 11px 20px;
+  color: #fff;
   text-decoration: none;
-  transition: border-color .25s, background .25s, transform .25s;
-  min-width: 150px;
+  min-width: 158px;
+  border-radius: 10px;
+  transition: transform .25s, box-shadow .25s, filter .25s;
+  border: none;
 }
-.app-btn:hover {
-  border-color: var(--gold);
-  background: rgba(197,160,89,.07);
-  transform: translateY(-2px);
+.app-btn:hover  { transform: translateY(-3px); filter: brightness(1.12); }
+.app-btn:active { transform: scale(0.97); }
+/* Google Play — preto oficial */
+.app-btn--android {
+  background: #000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.5);
 }
-.app-btn__icon { font-size: 26px; color: var(--gold); flex-shrink: 0; }
-.app-btn__text { line-height: 1.2; }
-.app-btn__small { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
-.app-btn__store { font-size: 14px; font-weight: 600; color: var(--white); font-family: var(--serif); }
+.app-btn--android:hover { box-shadow: 0 6px 20px rgba(0,0,0,.6); }
+/* App Store — preto oficial */
+.app-btn--ios {
+  background: #000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+.app-btn--ios:hover { box-shadow: 0 6px 20px rgba(0,0,0,.6); }
+.app-btn__icon { font-size: 28px; flex-shrink: 0; line-height: 1; }
+.app-btn--android .app-btn__icon { color: #01d1a0; }
+.app-btn--ios     .app-btn__icon { color: #fff; }
+.app-btn__text  { line-height: 1.2; }
+.app-btn__small { font-size: 9px; letter-spacing: .5px; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.app-btn__store { font-size: 15px; font-weight: 700; color: #fff; font-family: var(--sans); letter-spacing: -.2px; }
 
 /* Navbar app badge — aparece em mobile e desktop */
 .nav-app-badge {
@@ -1025,6 +1036,7 @@ ul { list-style: none; }
   .app-strip { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
   .app-strip__btns { width: 100%; }
   .app-btn { flex: 1; justify-content: center; min-width: 0; }
+  .app-btn__store { font-size: 13px; }
 }
 </style>
 
@@ -1122,7 +1134,7 @@ ul { list-style: none; }
   <!-- App links no menu mobile -->
   <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center;">
     <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" data-app="android" target="_blank" rel="noopener noreferrer"
-       class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
+       class="app-btn app-btn--android" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
       <i class="fab fa-google-play app-btn__icon" style="font-size:20px;"></i>
       <div class="app-btn__text">
         <div class="app-btn__small">Play Store</div>
@@ -1130,7 +1142,7 @@ ul { list-style: none; }
       </div>
     </a>
     <a href="https://apps.apple.com/br/app/barbearia-clube-merc%C3%AAs/id6498927462" data-app="ios" target="_blank" rel="noopener noreferrer"
-       class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
+       class="app-btn app-btn--ios" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
       <i class="fab fa-apple app-btn__icon" style="font-size:20px;"></i>
       <div class="app-btn__text">
         <div class="app-btn__small">App Store</div>
@@ -1339,7 +1351,7 @@ ul { list-style: none; }
       </div>
       <div class="app-strip__btns">
         <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" data-app="android" target="_blank" rel="noopener noreferrer"
-           class="app-btn" aria-label="Baixar na Google Play Store">
+           class="app-btn app-btn--android" aria-label="Baixar na Google Play Store">
           <i class="fab fa-google-play app-btn__icon"></i>
           <div class="app-btn__text">
             <div class="app-btn__small">Disponível no</div>
@@ -1347,7 +1359,7 @@ ul { list-style: none; }
           </div>
         </a>
         <a href="https://apps.apple.com/br/app/barbearia-clube-merc%C3%AAs/id6498927462" data-app="ios" target="_blank" rel="noopener noreferrer"
-           class="app-btn" aria-label="Baixar na Apple App Store">
+           class="app-btn app-btn--ios" aria-label="Baixar na Apple App Store">
           <i class="fab fa-apple app-btn__icon"></i>
           <div class="app-btn__text">
             <div class="app-btn__small">Baixe na</div>
