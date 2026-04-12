@@ -7,7 +7,7 @@
      Meta tags, Schema.org, Open Graph, Favicon
 ════════════════════════════════════════════════════ -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 
@@ -926,16 +926,10 @@ ul { list-style: none; }
   .faq-a { padding: 0 20px 18px; }
 }
 
-/* ── MEIRE: card exclusivo da Fundadora ──
-   Foto quase quadrada (1082×1077px).
-   Usando aspect-ratio 1/1 para eliminar qualquer risco de corte.
-   object-position: center top garante que o rosto apareça sempre. */
+/* ── MEIRE: igual aos outros cards da liderança ── */
 .tc--meire .tc__img {
-  aspect-ratio: 1 / 1 !important;
-  object-position: center top !important;
-}
-.tc--meire .ph--leader {
-  aspect-ratio: 1 / 1 !important;
+  aspect-ratio: 3 / 4;
+  object-position: center 20%;
 }
 </style>
 
@@ -1043,8 +1037,9 @@ ul { list-style: none; }
         <div class="logo__img-wrap">
           <img src="logo.png"
                alt="Barbearia Clube"
+               loading="eager"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-               style="height:44px;width:auto;display:block;object-fit:contain;">
+               style="height:44px;width:auto;display:block;object-fit:contain;" width="200" height="44">
           <!-- Fallback BC diamante se logo.png não existir -->
           <div class="logo__diamond" style="display:none;"><span class="logo__ltr">BC</span></div>
         </div>
@@ -1307,8 +1302,8 @@ ul { list-style: none; }
       <!-- MEIRE — Instagram: meirefp -->
       <article class="tc tc--leader tc--meire fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <a href="https://www.instagram.com/meirefp" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Meire">
-            <img class="tc__img" src="meire.png"
+          <a href="https://www.instagram.com/meirefp" target="_blank" rel="noopener noreferrer me" aria-label="Instagram de Meire">
+            <img class="tc__img" src="meire.png" width="400" height="400"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
                  alt="Meire — Sócia-Fundadora — Barbearia Clube" loading="lazy" itemprop="image">
             <div class="ph-img ph--leader" style="display:none;"><i class="fas fa-user"></i><span>meire.png</span></div>
@@ -1327,8 +1322,8 @@ ul { list-style: none; }
       <!-- WAGNER — link Instagram -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <a href="https://www.instagram.com/owagneralvess" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Wagner">
-            <img class="tc__img" src="wagner.png"
+          <a href="https://www.instagram.com/owagneralvess" target="_blank" rel="noopener noreferrer me" aria-label="Instagram de Wagner">
+            <img class="tc__img" src="wagner.png" width="400" height="400"
                  onerror="this.style.display='none';"
                  alt="Wagner — Sócio e Barbeiro Sênior — Barbearia Clube" loading="lazy" itemprop="image">
             <div class="ph-img ph--leader" style="display:none;"><i class="fas fa-user"></i><span>wagner.png</span></div>
@@ -1348,8 +1343,8 @@ ul { list-style: none; }
       <!-- JULIANO — link Instagram -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <a href="https://www.instagram.com/julianobarross" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliano">
-            <img class="tc__img" src="juliano.png"
+          <a href="https://www.instagram.com/julianobarross" target="_blank" rel="noopener noreferrer me" aria-label="Instagram de Juliano">
+            <img class="tc__img" src="juliano.png" width="400" height="400"
                  onerror="this.style.display='none';"
                  alt="Juliano — Sócio e Gestor — Barbearia Clube" loading="lazy" itemprop="image">
             <div class="ph-img ph--leader" style="display:none;"><i class="fas fa-user"></i><span>juliano.png</span></div>
@@ -1375,7 +1370,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/perezbarbeiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Perez">
-            <img class="tc__img" src="perez.png" onerror="this.style.display='none';" alt="Perez — Barbeiro Sênior" loading="lazy" itemprop="image">
+            <img class="tc__img" src="perez.png" width="400" height="400" onerror="this.style.display='none';" alt="Perez — Barbeiro Sênior" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>perez.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1393,7 +1388,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/fernandosopzak/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Fernando">
-            <img class="tc__img" src="fernando.png" onerror="this.style.display='none';" alt="Fernando — Barbeiro Sênior" loading="lazy" itemprop="image">
+            <img class="tc__img" src="fernando.png" width="400" height="400" onerror="this.style.display='none';" alt="Fernando — Barbeiro Sênior" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>fernando.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1411,7 +1406,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/barbeiro.maicon" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Maicon">
-            <img class="tc__img" src="maicon.png" onerror="this.style.display='none';" alt="Maicon — Barbeiro Sênior" loading="lazy" itemprop="image">
+            <img class="tc__img" src="maicon.png" width="400" height="400" onerror="this.style.display='none';" alt="Maicon — Barbeiro Sênior" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>maicon.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1429,7 +1424,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/ojorgeanderson" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jorge">
-            <img class="tc__img" src="jorge.png" onerror="this.style.display='none';" alt="Jorge — Barbeiro" loading="lazy" itemprop="image">
+            <img class="tc__img" src="jorge.png" width="400" height="400" onerror="this.style.display='none';" alt="Jorge — Barbeiro" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>jorge.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1447,7 +1442,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/pedroperez_barbeiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Pedro">
-            <img class="tc__img" src="pedro.png" onerror="this.style.display='none';" alt="Pedro — Barbeiro" loading="lazy" itemprop="image">
+            <img class="tc__img" src="pedro.png" width="400" height="400" onerror="this.style.display='none';" alt="Pedro — Barbeiro" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>pedro.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1465,7 +1460,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/g.basniak/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Gabriel">
-            <img class="tc__img" src="gabriel.png" onerror="this.style.display='none';" alt="Gabriel — Barbeiro" loading="lazy" itemprop="image">
+            <img class="tc__img" src="gabriel.png" width="400" height="400" onerror="this.style.display='none';" alt="Gabriel — Barbeiro" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>gabriel.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1483,7 +1478,7 @@ ul { list-style: none; }
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/emersonchemimm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Emerson">
-            <img class="tc__img" src="emerson.png" onerror="this.style.display='none';" alt="Emerson — Barbeiro" loading="lazy" itemprop="image">
+            <img class="tc__img" src="emerson.png" width="400" height="400" onerror="this.style.display='none';" alt="Emerson — Barbeiro" loading="lazy" itemprop="image">
             <div class="ph-img ph--barber" style="display:none;"><i class="fas fa-user"></i><span>emerson.png</span></div>
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
@@ -1506,7 +1501,7 @@ ul { list-style: none; }
       <!-- PATRICIA — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <img class="tc__img" src="patricia.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Patricia — Manicure" loading="lazy" itemprop="image">
+          <img class="tc__img" src="patricia.png" width="400" height="400" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Patricia — Manicure" loading="lazy" itemprop="image">
           <div class="ph-img ph--spec" style="display:none;"><i class="fas fa-user"></i><span>patricia.png</span></div>
           <div class="tc__gradient"></div>
           <span class="tc__badge">Manicure</span>
@@ -1520,7 +1515,7 @@ ul { list-style: none; }
       <!-- LILIANE — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <img class="tc__img" src="liliane.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Liliane — Manicure" loading="lazy" itemprop="image">
+          <img class="tc__img" src="liliane.png" width="400" height="400" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Liliane — Manicure" loading="lazy" itemprop="image">
           <div class="ph-img ph--spec" style="display:none;"><i class="fas fa-user"></i><span>liliane.png</span></div>
           <div class="tc__gradient"></div>
           <span class="tc__badge">Manicure</span>
@@ -1534,7 +1529,7 @@ ul { list-style: none; }
       <!-- DRIELLI — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <img class="tc__img" src="drielli.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Drielli — Massoterapeuta" loading="lazy" itemprop="image">
+          <img class="tc__img" src="drielli.png" width="400" height="400" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Drielli — Massoterapeuta" loading="lazy" itemprop="image">
           <div class="ph-img ph--spec" style="display:none;"><i class="fas fa-user"></i><span>drielli.png</span></div>
           <div class="tc__gradient"></div>
           <span class="tc__badge">Massoterapeuta</span>
@@ -1548,7 +1543,7 @@ ul { list-style: none; }
       <!-- SIRLENE — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <img class="tc__img" src="sirlene.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Sirlene — Podóloga" loading="lazy" itemprop="image">
+          <img class="tc__img" src="sirlene.png" width="400" height="400" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Sirlene — Podóloga" loading="lazy" itemprop="image">
           <div class="ph-img ph--spec" style="display:none;"><i class="fas fa-user"></i><span>sirlene.png</span></div>
           <div class="tc__gradient"></div>
           <span class="tc__badge">Podóloga</span>
@@ -1579,7 +1574,7 @@ ul { list-style: none; }
         <div class="test-stars">★★★★★</div>
         <blockquote class="test-quote" itemprop="reviewBody">"Ambiente sofisticado e profissionais experientes. Perez e Adriano são lendas."</blockquote>
         <div class="test-foot">
-          <img class="test-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=70" alt="Marcos P." loading="lazy">
+          <img class="test-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=70" width="44" height="44" alt="Marcos P." loading="lazy">
           <div><div class="test-name" itemprop="author">Marcos P.</div><div class="test-city">Curitiba, PR</div></div>
           <span class="test-src">Google</span>
         </div>
@@ -1588,7 +1583,7 @@ ul { list-style: none; }
         <div class="test-stars">★★★★★</div>
         <blockquote class="test-quote" itemprop="reviewBody">"Barba na navalha à moda antiga, toalha quente... Uma experiência terapêutica. Adriano é mestre."</blockquote>
         <div class="test-foot">
-          <img class="test-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=70" alt="Roberto S." loading="lazy">
+          <img class="test-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=70" width="44" height="44" alt="Roberto S." loading="lazy">
           <div><div class="test-name" itemprop="author">Roberto S.</div><div class="test-city">Curitiba, PR</div></div>
           <span class="test-src">Google</span>
         </div>
@@ -1597,7 +1592,7 @@ ul { list-style: none; }
         <div class="test-stars">★★★★★</div>
         <blockquote class="test-quote" itemprop="reviewBody">"Além do corte e barba impecáveis, a massagem relaxante é incrível. É um momento de autocuidado que todo homem merece."</blockquote>
         <div class="test-foot">
-          <img class="test-avatar" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&q=70" alt="André L." loading="lazy">
+          <img class="test-avatar" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&q=70" width="44" height="44" alt="André L." loading="lazy">
           <div><div class="test-name" itemprop="author">André L.</div><div class="test-city">Curitiba, PR</div></div>
           <span class="test-src">Google</span>
         </div>
@@ -1725,7 +1720,7 @@ ul { list-style: none; }
             <img src="logo.png"
                  alt="Barbearia Clube"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-                 style="height:40px;width:auto;display:block;object-fit:contain;">
+                 style="height:40px;width:auto;display:block;object-fit:contain;" width="200" height="40">
             <div class="logo__diamond" style="display:none;"><span class="logo__ltr">BC</span></div>
           </div>
           <div class="logo__txt" style="margin-left:13px;">
@@ -1885,6 +1880,21 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 })();
 
 // Controles do vídeo
+// FAQ accordion
+function toggleFaq(btn) {
+  var isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(function(b) {
+    b.setAttribute('aria-expanded', 'false');
+    var a = b.nextElementSibling;
+    if (a) a.classList.remove('open');
+  });
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    var ans = btn.nextElementSibling;
+    if (ans) ans.classList.add('open');
+  }
+}
+
 function toggleVideo(btn) {
   var video = btn.closest('.video-section__player').querySelector('video');
   if (!video) return;
