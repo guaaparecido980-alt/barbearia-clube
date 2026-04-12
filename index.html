@@ -925,6 +925,18 @@ ul { list-style: none; }
   .faq-q { padding: 18px 20px; font-size: 14px; }
   .faq-a { padding: 0 20px 18px; }
 }
+
+/* ── MEIRE: card exclusivo da Fundadora ──
+   Foto quase quadrada (1082×1077px).
+   Usando aspect-ratio 1/1 para eliminar qualquer risco de corte.
+   object-position: center top garante que o rosto apareça sempre. */
+.tc--meire .tc__img {
+  aspect-ratio: 1 / 1 !important;
+  object-position: center top !important;
+}
+.tc--meire .ph--leader {
+  aspect-ratio: 1 / 1 !important;
+}
 </style>
 
 <!-- FAQ Schema — Rich Snippet no Google -->
@@ -1293,7 +1305,7 @@ ul { list-style: none; }
     <div class="grid-3">
 
       <!-- MEIRE — Instagram: meirefp -->
-      <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
+      <article class="tc tc--leader tc--meire fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/meirefp" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Meire">
             <img class="tc__img" src="meire.png"
