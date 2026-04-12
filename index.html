@@ -2,15 +2,16 @@
 <html lang="pt-BR">
 <head>
 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="icon" type="image/png" href="favicon.png">
 
-
+<!-- ① Title & Description → Bigorrilho -->
 <title>Barbearia Clube | Tradição e Excelência em Curitiba (Bigorrilho)</title>
 <meta name="description" content="A barbearia clássica preferida de Curitiba. Barbearia Clube: Barba na navalha, cortes visagistas, Dia do Noivo VIP, manicures, podologia e massoterapia no Bigorrilho. Agende agora!">
 
+<!-- ② Canônico, robots, geo -->
 <link rel="canonical" href="https://www.barbeariaclube.com.br/">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Barbearia Clube">
@@ -19,6 +20,7 @@
 <meta name="geo.position" content="-25.4288;-49.2843">
 <meta name="ICBM" content="-25.4288, -49.2843">
 
+<!-- ③ Open Graph -->
 <meta property="og:type"        content="business.business">
 <meta property="og:title"       content="Barbearia Clube | Bigorrilho, Curitiba — Desde 2007">
 <meta property="og:description" content="Barba na navalha, cortes visagistas, Dia do Noivo VIP, massoterapia e podologia. A experiência de barbearia mais completa de Curitiba.">
@@ -32,15 +34,18 @@
 <meta property="business:contact_data:country_name"   content="Brasil">
 <meta property="business:contact_data:phone_number"   content="+55-41-3014-9413">
 
+<!-- ④ Twitter Card -->
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="Barbearia Clube | Curitiba desde 2007 — Bigorrilho">
 <meta name="twitter:description" content="Barba na navalha, visagismo e Dia do Noivo VIP no Bigorrilho. Agende pelo WhatsApp!">
 
+<!-- Fontes & Ícones -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- ⑤ Schema.org BarberShop — dados reais completos -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -106,7 +111,7 @@
     "name": "Serviços Barbearia Clube",
     "itemListElement": [
       { "@type": "Offer", "name": "Visagismo Masculino",  "priceCurrency": "BRL" },
-      { "@type": "Offer", "name": "Corte",                 "price": "115", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Corte",                "price": "115", "priceCurrency": "BRL" },
       { "@type": "Offer", "name": "Cabelo + Barba",       "price": "180", "priceCurrency": "BRL" },
       { "@type": "Offer", "name": "Barba Completa",       "price": "80",  "priceCurrency": "BRL" },
       { "@type": "Offer", "name": "Massagem Relaxante",   "price": "120", "priceCurrency": "BRL" },
@@ -121,7 +126,7 @@
 
 <style>
 /* ═════════════════════════════════════════════════════
-    RESET & TOKENS
+   RESET & TOKENS
 ══════════════════════════════════════════════════════ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -155,10 +160,10 @@ ul { list-style: none; }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
 /* ═════════════════════════════════════════════════════
-    LAYOUT
+   LAYOUT
 ══════════════════════════════════════════════════════ */
 .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-.section         { padding: 96px 0; }
+.section        { padding: 96px 0; }
 .section--dark  { background: var(--dark); }
 .section--black { background: var(--black); }
 
@@ -190,7 +195,7 @@ ul { list-style: none; }
 .sub-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(197,160,89,.35), transparent); }
 
 /* ═════════════════════════════════════════════════════
-    BUTTONS — ETAPA 3 & 5: WhatsApp central + scale
+   BUTTONS — ETAPA 3 & 5: WhatsApp central + scale
 ══════════════════════════════════════════════════════ */
 .btn {
   display: inline-flex; align-items: center; gap: 9px;
@@ -217,13 +222,13 @@ ul { list-style: none; }
 .btn-wa:hover { background: #1fba59; box-shadow: 0 0 32px rgba(37,211,102,.45); }
 .btn-wa i { font-size: 18px; }
 
-.btn-gold          { background: var(--gold); color: var(--black); }
-.btn-gold:hover    { background: var(--gold-lt); box-shadow: 0 0 28px rgba(197,160,89,.4); }
-.btn-outline       { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 14px 36px; }
+.btn-gold         { background: var(--gold); color: var(--black); }
+.btn-gold:hover   { background: var(--gold-lt); box-shadow: 0 0 28px rgba(197,160,89,.4); }
+.btn-outline      { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 14px 36px; }
 .btn-outline:hover{ background: rgba(197,160,89,.09); box-shadow: 0 0 22px rgba(197,160,89,.2); }
 
 /* ═════════════════════════════════════════════════════
-    NAVBAR — ETAPA 5: Logo perfeitamente centralizado
+   NAVBAR — ETAPA 5: Logo perfeitamente centralizado
 ══════════════════════════════════════════════════════ */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -285,7 +290,7 @@ ul { list-style: none; }
 .mob-link:hover { color: var(--gold); }
 
 /* ═════════════════════════════════════════════════════
-    HERO
+   HERO
 ══════════════════════════════════════════════════════ */
 .hero {
   min-height: 100vh; display: flex;
@@ -333,7 +338,7 @@ ul { list-style: none; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
 
 /* ═════════════════════════════════════════════════════
-    PROOF RIBBON
+   PROOF RIBBON
 ══════════════════════════════════════════════════════ */
 .ribbon { background: var(--dark); border-top: 1px solid rgba(197,160,89,.18); border-bottom: 1px solid rgba(197,160,89,.18); }
 .ribbon__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
@@ -345,7 +350,7 @@ ul { list-style: none; }
 .ri-lbl  { font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-top: 4px; }
 
 /* ═════════════════════════════════════════════════════
-    VISAGISMO — DESTAQUE
+   VISAGISMO — DESTAQUE
 ══════════════════════════════════════════════════════ */
 .vis-card {
   border: 1px solid rgba(197,160,89,.4);
@@ -368,7 +373,7 @@ ul { list-style: none; }
 .vis-pval   { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--gold); }
 
 /* ═════════════════════════════════════════════════════
-    PRICE CARDS
+   PRICE CARDS
 ══════════════════════════════════════════════════════ */
 .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-bottom: 44px; }
 .price-card { background: var(--dark); border: 1px solid rgba(197,160,89,.12); padding: 34px 30px; position: relative; transition: border-color .3s, transform .3s; }
@@ -384,7 +389,7 @@ ul { list-style: none; }
 .pr-val  { font-family: var(--serif); font-size: 1rem; color: var(--gold); margin-left: 12px; white-space: nowrap; }
 
 /* ═════════════════════════════════════════════════════
-    DIA DO NOIVO
+   DIA DO NOIVO
 ══════════════════════════════════════════════════════ */
 .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .pkg-card { background: var(--dark); border: 1px solid rgba(197,160,89,.14); padding: 40px 30px; text-align: center; position: relative; transition: border-color .3s, transform .3s; }
@@ -400,8 +405,8 @@ ul { list-style: none; }
 .pkg-items  { margin-bottom: 30px; }
 
 /* ═════════════════════════════════════════════════════
-    ETAPA 2 — EQUIPE COMPLETA
-    Cards com link Instagram na foto
+   ETAPA 2 — EQUIPE COMPLETA
+   Cards com link Instagram na foto
 ══════════════════════════════════════════════════════ */
 
 /* Grid liderança — 3 cols */
@@ -492,7 +497,7 @@ ul { list-style: none; }
 .ph--spec    { height: 230px; }
 
 /* ═════════════════════════════════════════════════════
-    DEPOIMENTOS
+   DEPOIMENTOS
 ══════════════════════════════════════════════════════ */
 .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
 .test-card { background: var(--dark); border: 1px solid rgba(197,160,89,.12); padding: 34px 30px; transition: border-color .3s, transform .3s; }
@@ -513,7 +518,7 @@ ul { list-style: none; }
 }
 
 /* ═════════════════════════════════════════════════════
-    ETAPA 3 — CTA WHATSAPP EXCLUSIVO
+   ETAPA 3 — CTA WHATSAPP EXCLUSIVO
 ══════════════════════════════════════════════════════ */
 .booking {
   background: var(--dark);
@@ -535,7 +540,7 @@ ul { list-style: none; }
 .wa-float:hover { transform: scale(1.12); }
 
 /* ═════════════════════════════════════════════════════
-    FOOTER — ETAPA 4: horários reais + ETAPA 3: só FB/IG/WA
+   FOOTER — ETAPA 4: horários reais + ETAPA 3: só FB/IG/WA
 ══════════════════════════════════════════════════════ */
 .footer { background: var(--black); border-top: 1px solid rgba(197,160,89,.18); }
 .footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 52px; padding: 72px 0 56px; }
@@ -566,7 +571,7 @@ ul { list-style: none; }
 .soc-btn--wa:hover { background: rgba(37,211,102,.1); border-color: rgba(37,211,102,.7); }
 .footer__bot { border-top: 1px solid rgba(197,160,89,.1); padding: 18px 0; }
 .footer__bot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.footer__copy     { font-size: 12px; color: var(--faint); }
+.footer__copy    { font-size: 12px; color: var(--faint); }
 .footer__tagline { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); }
 
 /* ─── Fade in ─── */
@@ -604,7 +609,7 @@ ul { list-style: none; }
 }
 
 /* ════════════════════════════════════════════════════
-    SEÇÃO DE VÍDEO
+   SEÇÃO DE VÍDEO
 ═══════════════════════════════════════════════════ */
 .video-section {
   background: var(--black);
@@ -718,6 +723,9 @@ ul { list-style: none; }
 
 <body>
 
+<!-- ══════════════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════════════ -->
 <nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
   <button class="mob-close" onclick="toggleMenu()" aria-label="Fechar"><i class="fas fa-times"></i></button>
   <a href="#inicio"   class="mob-link" onclick="toggleMenu()">Início</a>
@@ -725,21 +733,27 @@ ul { list-style: none; }
   <a href="#noivo"    class="mob-link" onclick="toggleMenu()">Dia do Noivo</a>
   <a href="#equipe"   class="mob-link" onclick="toggleMenu()">Equipe</a>
   <a href="#contato"  class="mob-link" onclick="toggleMenu()">Contato</a>
+  <!-- ETAPA 3: WhatsApp como CTA principal -->
   <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
      class="btn btn-gold" onclick="toggleMenu()" style="margin-top:14px;">
     <i class="fas fa-calendar-check"></i> Agendar Agora
   </a>
 </nav>
 
+<!-- ══════════════════════════════════════════════
+     NAVBAR — ETAPA 5: Logo centralizado
+════════════════════════════════════════════════ -->
 <header class="navbar" id="navbar">
   <div class="container">
     <div class="navbar__inner">
+      <!-- ETAPA 5: Logo profissional BC -->
       <a href="#inicio" class="logo" aria-label="Barbearia Clube — Início">
         <div class="logo__img-wrap">
           <img src="logo.png"
                alt="Barbearia Clube"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
                style="height:44px;width:auto;display:block;object-fit:contain;">
+          <!-- Fallback BC diamante se logo.png não existir -->
           <div class="logo__diamond" style="display:none;"><span class="logo__ltr">BC</span></div>
         </div>
         <div class="logo__txt">
@@ -755,6 +769,7 @@ ul { list-style: none; }
         <a href="#contato"  class="nav-link">Contato</a>
       </nav>
       <div style="display:flex;align-items:center;gap:12px;">
+        <!-- ETAPA 3: WhatsApp no navbar -->
         <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
            class="btn btn-gold nav-btn-d" style="padding:11px 22px;font-size:10px;">
           <i class="fas fa-calendar-check"></i> Agendar
@@ -767,6 +782,9 @@ ul { list-style: none; }
 
 <main>
 
+<!-- ══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
 <section id="inicio" class="hero" aria-label="Barbearia Clube Curitiba">
   <div class="hero__bg" aria-hidden="true"></div>
   <div class="hero__glow" aria-hidden="true"></div>
@@ -781,6 +799,7 @@ ul { list-style: none; }
       Desde 2007 cuidando do homem moderno com barba na navalha à moda antiga,
       cortes visagistas exclusivos, massoterapia e podologia. A experiência completa no Bigorrilho.
     </p>
+    <!-- ETAPA 3: CTA principal = WhatsApp -->
     <div class="hero__ctas">
       <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
         <i class="fas fa-calendar-check"></i> Agendar Agora
@@ -803,6 +822,9 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════
+     PROOF RIBBON
+════════════════════════════════════════════════ -->
 <div class="ribbon">
   <div class="container">
     <div class="ribbon__grid">
@@ -814,6 +836,9 @@ ul { list-style: none; }
   </div>
 </div>
 
+<!-- ══════════════════════════════════════════════
+     SEÇÃO DE VÍDEO — video.mp4
+════════════════════════════════════════════════ -->
 <section class="video-section" aria-label="Vídeo institucional Barbearia Clube">
   <div class="video-section__inner">
     <div class="video-section__text fi">
@@ -833,6 +858,7 @@ ul { list-style: none; }
         aria-label="Vídeo institucional da Barbearia Clube"
         onerror="this.closest('.video-section__player').innerHTML='<div class=\'video-fallback\'><i class=\'fas fa-play-circle\'></i><p>Carregando vídeo...</p></div>'"
       ></video>
+      <!-- Controles customizados -->
       <div class="video-section__controls">
         <button class="video-btn" onclick="toggleVideo(this)" aria-label="Pausar/Reproduzir vídeo">
           <i class="fas fa-pause"></i>
@@ -841,6 +867,7 @@ ul { list-style: none; }
           <i class="fas fa-volume-mute"></i>
         </button>
       </div>
+      <!-- Borda decorativa dourada -->
       <div class="video-section__deco video-section__deco--tl"></div>
       <div class="video-section__deco video-section__deco--br"></div>
     </div>
@@ -848,15 +875,19 @@ ul { list-style: none; }
 </section>
 
 
+<!-- ══════════════════════════════════════════════
+     SERVIÇOS & PREÇOS
+════════════════════════════════════════════════ -->
 <section id="servicos" class="section section--black">
   <div class="container">
     <div class="sh fi">
       <span class="sh__tag">Tabela de Preços Completa</span>
-      <h2 class="sh__title">Serviços & Especialidades</h2>
+      <h2 class="sh__title">Serviços &amp; Especialidades</h2>
       <div class="sh__rule"></div>
       <p class="sh__lead">Cada serviço executado com técnica refinada, produtos premium e o cuidado que você merece há mais de 17 anos.</p>
     </div>
 
+    <!-- Visagismo destaque -->
     <article class="vis-card fi" itemscope itemtype="https://schema.org/Service">
       <div class="vis-icon" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
       <div>
@@ -878,9 +909,10 @@ ul { list-style: none; }
       </div>
     </article>
 
+    <!-- Grade de preços -->
     <div class="price-grid">
       <article class="price-card fi" itemscope itemtype="https://schema.org/Service">
-        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-cut"></i></div><h3 class="pc-title" itemprop="name">Cabelo & Barba</h3></div>
+        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-cut"></i></div><h3 class="pc-title" itemprop="name">Cabelo &amp; Barba</h3></div>
         <div class="pr-row"><span class="pr-name">Corte</span><span class="pr-val">R$ 115</span></div>
         <div class="pr-row"><span class="pr-name">Passada de Máquina</span><span class="pr-val">R$ 60</span></div>
         <div class="pr-row"><span class="pr-name">Tintura</span><span class="pr-val">R$ 100</span></div>
@@ -889,7 +921,7 @@ ul { list-style: none; }
         <div class="pr-row"><span class="pr-name">Barba Máquina</span><span class="pr-val">R$ 80</span></div>
       </article>
       <article class="price-card fi" itemscope itemtype="https://schema.org/Service">
-        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-spa"></i></div><h3 class="pc-title" itemprop="name">Estética & Bem-estar</h3></div>
+        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-spa"></i></div><h3 class="pc-title" itemprop="name">Estética &amp; Bem-estar</h3></div>
         <div class="pr-row"><span class="pr-name">Massagem Relaxante</span><span class="pr-val">R$ 120</span></div>
         <div class="pr-row"><span class="pr-name">Massagem Terapêutica</span><span class="pr-val">R$ 140</span></div>
         <div class="pr-row"><span class="pr-name">Faxina na Cara</span><span class="pr-val">R$ 130</span></div>
@@ -898,7 +930,7 @@ ul { list-style: none; }
         <div class="pr-row"><span class="pr-name">Depilação Íntima Completa</span><span class="pr-val">R$ 140</span></div>
       </article>
       <article class="price-card fi" itemscope itemtype="https://schema.org/Service">
-        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-hand-sparkles"></i></div><h3 class="pc-title" itemprop="name">Mãos & Pés</h3></div>
+        <div class="pc-hd"><div class="pc-icon"><i class="fas fa-hand-sparkles"></i></div><h3 class="pc-title" itemprop="name">Mãos &amp; Pés</h3></div>
         <div class="pr-row"><span class="pr-name">Podologia Completa</span><span class="pr-val">R$ 135</span></div>
         <div class="pr-row"><span class="pr-name">Manicure</span><span class="pr-val">R$ 35</span></div>
         <div class="pr-row"><span class="pr-name">Pedicure</span><span class="pr-val">R$ 45</span></div>
@@ -914,6 +946,9 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════
+     DIA DO NOIVO
+════════════════════════════════════════════════ -->
 <section id="noivo" class="section section--dark">
   <div class="container">
     <div class="sh fi">
@@ -926,7 +961,7 @@ ul { list-style: none; }
 
       <article class="pkg-card fi" itemscope itemtype="https://schema.org/Offer">
         <h3 class="pkg-name" itemprop="name">Bronze</h3>
-        <div class="pkg-price"><span>R$ </span>450</div>
+        <div class="pkg-price"><span>R$&nbsp;</span>450</div>
         <div class="pkg-items">
           <div class="pkg-item"><i class="fas fa-check"></i>Cabelo</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Hidratação Capilar</div>
@@ -941,7 +976,7 @@ ul { list-style: none; }
 
       <article class="pkg-card fi" itemscope itemtype="https://schema.org/Offer">
         <h3 class="pkg-name" itemprop="name">Prata</h3>
-        <div class="pkg-price"><span>R$ </span>560</div>
+        <div class="pkg-price"><span>R$&nbsp;</span>560</div>
         <div class="pkg-items">
           <div class="pkg-item"><i class="fas fa-check"></i>Cabelo</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Hidratação Capilar</div>
@@ -958,7 +993,7 @@ ul { list-style: none; }
       <article class="pkg-card pkg-card--ft fi" itemscope itemtype="https://schema.org/Offer">
         <div class="pkg-badge">Mais Popular</div>
         <h3 class="pkg-name" itemprop="name">Ouro</h3>
-        <div class="pkg-price"><span>R$ </span>730</div>
+        <div class="pkg-price"><span>R$&nbsp;</span>730</div>
         <div class="pkg-items">
           <div class="pkg-item"><i class="fas fa-check"></i>Cabelo</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Hidratação Capilar</div>
@@ -978,6 +1013,12 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════
+     ETAPA 2 — EQUIPE COMPLETA
+     Hierarquia: Liderança / Barbeiros / Especialistas
+     Nomes em MAIÚSCULAS
+     Fotos clicáveis → Instagram
+════════════════════════════════════════════════ -->
 <section id="equipe" class="section section--black">
   <div class="container">
 
@@ -988,9 +1029,11 @@ ul { list-style: none; }
       <p class="sh__lead">14 profissionais apaixonados pelo que fazem. Décadas de experiência combinadas para oferecer o melhor da barbearia em Curitiba.</p>
     </div>
 
+    <!-- ── ① NOSSA LIDERANÇA ── -->
     <h3 class="sub-title fi"><i class="fas fa-crown"></i>Nossa Liderança</h3>
     <div class="grid-3">
 
+      <!-- MEIRE — sem link -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <img class="tc__img" src="meire.png"
@@ -1007,6 +1050,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- WAGNER — link Instagram -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/owagneralvess" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Wagner">
@@ -1017,16 +1061,17 @@ ul { list-style: none; }
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
           <div class="tc__gradient"></div>
-          <span class="tc__badge">Sócio & Barbeiro Sênior</span>
+          <span class="tc__badge">Sócio &amp; Barbeiro Sênior</span>
         </div>
         <div class="tc__body">
           <h4 class="tc__name" itemprop="name">WAGNER</h4>
-          <p class="tc__role">Sócio & Barbeiro Sênior</p>
+          <p class="tc__role">Sócio &amp; Barbeiro Sênior</p>
           <p class="tc__bio">Especialista em visagismo masculino. Com 20 anos de experiência, transforma cada corte em obra de arte personalizada para o formato do rosto de cada cliente.</p>
           <div class="tc__exp"><i class="fas fa-award"></i><span itemprop="description">20 Anos de Experiência</span></div>
         </div>
       </article>
 
+      <!-- JULIANO — link Instagram -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/julianobarross" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Juliano">
@@ -1037,18 +1082,22 @@ ul { list-style: none; }
             <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
           </a>
           <div class="tc__gradient"></div>
-          <span class="tc__badge">Sócio & Gestor</span>
+          <span class="tc__badge">Sócio &amp; Gestor</span>
         </div>
         <div class="tc__body">
           <h4 class="tc__name" itemprop="name">JULIANO</h4>
-          <p class="tc__role">Sócio & Gestor</p>
+          <p class="tc__role">Sócio &amp; Gestor</p>
           <p class="tc__bio">A força por trás da excelência operacional. Garante que cada detalhe da experiência — do agendamento ao acabamento final — seja impecável.</p>
         </div>
       </article>
 
-    </div><h3 class="sub-title fi"><i class="fas fa-scissors"></i>Nossos Barbeiros</h3>
+    </div><!-- /liderança -->
+
+    <!-- ── ② NOSSOS BARBEIROS ── -->
+    <h3 class="sub-title fi"><i class="fas fa-scissors"></i>Nossos Barbeiros</h3>
     <div class="grid-4">
 
+      <!-- PEREZ -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/perezbarbeiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Perez">
@@ -1066,6 +1115,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- FERNANDO -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/fernandosopzak/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Fernando">
@@ -1083,6 +1133,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- MAICON -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/barbeiro.maicon" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Maicon">
@@ -1100,6 +1151,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- JORGE -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/ojorgeanderson" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jorge">
@@ -1117,6 +1169,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- PEDRO -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/pedroperez_barbeiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Pedro">
@@ -1134,6 +1187,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- GABRIEL -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/g.basniak/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Gabriel">
@@ -1151,6 +1205,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- EMERSON -->
       <article class="tc tc--barber fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <a href="https://www.instagram.com/emersonchemimm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Emerson">
@@ -1168,9 +1223,13 @@ ul { list-style: none; }
         </div>
       </article>
 
-    </div><h3 class="sub-title fi"><i class="fas fa-hand-sparkles"></i>Nossas Especialistas em Bem-Estar & Estética</h3>
+    </div><!-- /barbeiros -->
+
+    <!-- ── ③ ESPECIALISTAS EM BEM-ESTAR & ESTÉTICA ── -->
+    <h3 class="sub-title fi"><i class="fas fa-hand-sparkles"></i>Nossas Especialistas em Bem-Estar &amp; Estética</h3>
     <div class="grid-spec">
 
+      <!-- PATRICIA — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <img class="tc__img" src="patricia.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Patricia — Manicure" loading="lazy" itemprop="image">
@@ -1180,10 +1239,11 @@ ul { list-style: none; }
         </div>
         <div class="tc__body">
           <h4 class="tc__name" itemprop="name">PATRICIA</h4>
-          <p class="tc__role">Manicure & Podóloga</p>
+          <p class="tc__role">Manicure &amp; Podóloga</p>
         </div>
       </article>
 
+      <!-- LILIANE — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <img class="tc__img" src="liliane.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Liliane — Manicure" loading="lazy" itemprop="image">
@@ -1197,6 +1257,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- DRIELLI — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <img class="tc__img" src="drielli.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Drielli — Massoterapeuta" loading="lazy" itemprop="image">
@@ -1210,6 +1271,7 @@ ul { list-style: none; }
         </div>
       </article>
 
+      <!-- SIRLENE — sem link -->
       <article class="tc tc--spec fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
           <img class="tc__img" src="sirlene.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Sirlene — Podóloga" loading="lazy" itemprop="image">
@@ -1223,9 +1285,14 @@ ul { list-style: none; }
         </div>
       </article>
 
-    </div></div>
+    </div><!-- /especialistas -->
+
+  </div>
 </section>
 
+<!-- ══════════════════════════════════════════════
+     DEPOIMENTOS REAIS
+════════════════════════════════════════════════ -->
 <section class="section section--dark">
   <div class="container">
     <div class="sh fi">
@@ -1270,6 +1337,9 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════
+     ETAPA 3 — CTA WHATSAPP EXCLUSIVO
+════════════════════════════════════════════════ -->
 <section id="agendar" class="booking">
   <div class="container">
     <div class="fi">
@@ -1289,10 +1359,14 @@ ul { list-style: none; }
 
 </main>
 
+<!-- ══════════════════════════════════════════════
+     FOOTER — ETAPA 3: só FB/IG/WA | ETAPA 4: horários reais
+════════════════════════════════════════════════ -->
 <footer id="contato" class="footer">
   <div class="container">
     <div class="footer__grid">
 
+      <!-- Col 1: Logo + Endereço + Mapa -->
       <div>
         <a href="#inicio" class="logo" style="margin-bottom:24px;display:inline-flex;" aria-label="Topo">
           <div class="logo__img-wrap">
@@ -1317,6 +1391,7 @@ ul { list-style: none; }
           <i class="fab fa-whatsapp" style="color:var(--wa);"></i>
           <a href="https://wa.me/554130149413" style="color:var(--muted);transition:color .25s;" onmouseover="this.style.color='var(--wa)'" onmouseout="this.style.color='var(--muted)'">(41) 3014-9413</a>
         </div>
+        <!-- Google Maps embed — Av. Cândido Hartmann, 1580, Bigorrilho -->
         <iframe class="map-embed"
           title="Barbearia Clube — Av. Cândido Hartmann, 1580, Bigorrilho, Curitiba"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.9!2d-49.2843!3d-25.4288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4b3c9f78d4b%3A0x6e8b2a1f5c3e7d9a!2sAv.%20C%C3%A2ndido%20Hartmann%2C%201580%20-%20Bigorrilho%2C%20Curitiba%20-%20PR%2C%2080730-440!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
@@ -1324,6 +1399,7 @@ ul { list-style: none; }
         </iframe>
       </div>
 
+      <!-- Col 2: ETAPA 4 — Horários reais -->
       <div>
         <h4 class="footer__h"><i class="fas fa-clock"></i>Horários de Atendimento</h4>
         <table class="hours-table">
@@ -1339,22 +1415,24 @@ ul { list-style: none; }
         </div>
         <div style="margin-top:26px;">
           <h4 class="footer__h"><i class="fas fa-envelope"></i>E-mail</h4>
-          <p style="font-size:13.5px;color:var(--muted);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="086b67667c697c67486a697a6a6d697a61696b647d6a6d266b6765266a7a">[email protected]</a></p>
+          <p style="font-size:13.5px;color:var(--muted);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="086b67667c697c67486a697a6a6d697a61696b647d6a6d266b6765266a7a">[email&#160;protected]</a></p>
           <p style="font-size:13.5px;color:var(--muted);margin-top:5px;">barbeariaclube.com.br</p>
         </div>
       </div>
 
+      <!-- Col 3: Links + ETAPA 3: apenas FB/IG/WA -->
       <div>
         <h4 class="footer__h"><i class="fas fa-link"></i>Links Rápidos</h4>
         <ul class="footer__links">
           <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Início</a></li>
-          <li><a href="#servicos"><i class="fas fa-chevron-right"></i>Serviços & Preços</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i>Serviços &amp; Preços</a></li>
           <li><a href="#noivo"><i class="fas fa-chevron-right"></i>Dia do Noivo</a></li>
           <li><a href="#equipe"><i class="fas fa-chevron-right"></i>Nossa Equipe</a></li>
           <li><a href="#contato"><i class="fas fa-chevron-right"></i>Contato</a></li>
         </ul>
         <div style="margin-top:26px;">
           <h4 class="footer__h"><i class="fas fa-share-alt"></i>Redes Sociais</h4>
+          <!-- ETAPA 3: APENAS Facebook, Instagram, WhatsApp -->
           <div class="footer__socials">
             <a href="https://facebook.com/barbeariaclube" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
@@ -1387,11 +1465,15 @@ ul { list-style: none; }
   </div>
 </footer>
 
+<!-- ETAPA 3: WhatsApp float — botão fixo sempre visível -->
 <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
    class="wa-float" aria-label="Agendar via WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ══════════════════════════════════════════════
+     SCRIPTS — navbar, menu, smooth scroll, fade-in
+════════════════════════════════════════════════ -->
 <script>
 // Navbar shrink ao scroll
 (function(){
