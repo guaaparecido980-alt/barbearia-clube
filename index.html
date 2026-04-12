@@ -2,10 +2,15 @@
 <html lang="pt-BR">
 <head>
 
-
+<!-- ═══════════════════════════════════════════════════
+     ETAPA 1 — SEO TÉCNICO SÊNIOR
+     Meta tags, Schema.org, Open Graph, Favicon
+════════════════════════════════════════════════════ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
 
 <!-- ① Title & Description → Bigorrilho -->
 <title>Barbearia Clube | Tradição e Excelência em Curitiba (Bigorrilho)</title>
@@ -476,12 +481,12 @@ ul { list-style: none; }
 .tc__bio  { font-size: 13px; color: var(--muted); line-height: 1.72; }
 .tc__exp  { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 11px; color: var(--gold); }
 
-/* Liderança: foto mais alta */
-.tc--leader .tc__img { height: 310px; }
+/* Liderança: foto mais alta — object-position top para não cortar rosto */
+.tc--leader .tc__img { height: 310px; object-position: center top; }
 /* Barbeiros: foto média */
-.tc--barber .tc__img { height: 260px; }
+.tc--barber .tc__img { height: 260px; object-position: center top; }
 /* Especialistas: foto menor */
-.tc--spec .tc__img   { height: 230px; }
+.tc--spec .tc__img   { height: 230px; object-position: center top; }
 
 /* Placeholder imagem */
 .ph-img {
@@ -550,7 +555,7 @@ ul { list-style: none; }
 .footer__addr i { color: var(--gold); margin-right: 7px; }
 .footer__ct { font-size: 14px; color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
 .footer__ct i { color: var(--gold); font-size: 13px; }
-.map-embed { width: 100%; height: 175px; border: 0; display: block; margin-top: 20px; }
+.map-embed { width: 100%; height: 175px; border: 0; display: block; margin-top: 20px; background: var(--navy); color-scheme: dark; }
 .hours-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .hours-table td { padding: 9px 0; border-bottom: 1px solid rgba(197,160,89,.07); }
 .hours-table tr:last-child td { border-bottom: none; }
@@ -718,6 +723,68 @@ ul { list-style: none; }
   .video-section { padding: 60px 0; }
 }
 
+
+/* ════════════════════════════════════════════════════
+   BANNER DE COOKIES
+═══════════════════════════════════════════════════ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: rgba(13, 16, 26, 0.97);
+  border-top: 1px solid rgba(197,160,89,.25);
+  backdrop-filter: blur(12px);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+.cookie-banner.visible { transform: translateY(0); }
+.cookie-banner__text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+  min-width: 220px;
+}
+.cookie-banner__text a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cookie-banner__text a:hover { color: var(--gold-lt); }
+.cookie-banner__actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cookie-btn--accept {
+  background: var(--gold);
+  color: var(--black);
+}
+.cookie-btn--accept:hover { background: var(--gold-lt); }
+.cookie-btn--decline {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(197,160,89,.25);
+}
+.cookie-btn--decline:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 600px) {
+  .cookie-banner { flex-direction: column; align-items: flex-start; padding-bottom: 84px; }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-btn { flex: 1; text-align: center; }
+}
 </style>
 </head>
 
@@ -1033,13 +1100,16 @@ ul { list-style: none; }
     <h3 class="sub-title fi"><i class="fas fa-crown"></i>Nossa Liderança</h3>
     <div class="grid-3">
 
-      <!-- MEIRE — sem link -->
+      <!-- MEIRE — Instagram: meirefp -->
       <article class="tc tc--leader fi" itemscope itemtype="https://schema.org/Person">
         <div class="tc__img-wrap">
-          <img class="tc__img" src="meire.png"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-               alt="Meire — Sócia-Fundadora — Barbearia Clube" loading="lazy" itemprop="image">
-          <div class="ph-img ph--leader" style="display:none;"><i class="fas fa-user"></i><span>meire.png</span></div>
+          <a href="https://www.instagram.com/meirefp" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Meire">
+            <img class="tc__img" src="meire.png"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                 alt="Meire — Sócia-Fundadora — Barbearia Clube" loading="lazy" itemprop="image">
+            <div class="ph-img ph--leader" style="display:none;"><i class="fas fa-user"></i><span>meire.png</span></div>
+            <div class="tc__ig-overlay"><i class="fab fa-instagram"></i></div>
+          </a>
           <div class="tc__gradient"></div>
           <span class="tc__badge">Sócia-Fundadora</span>
         </div>
@@ -1552,6 +1622,22 @@ function toggleMute(btn) {
   btn.querySelector('i').className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
 }
 </script>
+
+
+<!-- ══════════════════════════════════════════════
+     BANNER DE COOKIES & PRIVACIDADE
+════════════════════════════════════════════════ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimento de cookies" aria-live="polite">
+  <p class="cookie-banner__text">
+    Utilizamos cookies para melhorar sua experiência e analisar o tráfego do site.
+    Ao continuar navegando, você concorda com nossa
+    <a href="politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+  </p>
+  <div class="cookie-banner__actions">
+    <button class="cookie-btn cookie-btn--decline" onclick="declineCookies()" aria-label="Recusar cookies">Recusar</button>
+    <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()" aria-label="Aceitar cookies">Aceitar</button>
+  </div>
+</div>
 
 </body>
 </html>
