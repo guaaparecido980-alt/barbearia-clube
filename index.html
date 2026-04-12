@@ -582,8 +582,20 @@ ul { list-style: none; }
 .footer__tagline { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); }
 
 /* ─── Fade in ─── */
-.fi { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
-.fi.visible { opacity: 1; transform: translateY(0); }
+.fi {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  /* Sem animation-fill-mode: backwards para não bloquear conteúdo */
+}
+.fi.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Garante que, caso JS falhe totalmente, o conteúdo apareça */
+@media (prefers-reduced-motion: reduce) {
+  .fi { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
 
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
@@ -1318,36 +1330,67 @@ ul { list-style: none; }
 </a>
 
 <!-- ══════════════════════════════════════════════
-     SCRIPTS
+     SCRIPTS — navbar, menu, smooth scroll, fade-in
 ════════════════════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Navbar shrink
+<script>
+// Navbar shrink ao scroll
 (function(){
   var nb = document.getElementById('navbar');
+  if(!nb) return;
   window.addEventListener('scroll', function(){
     nb.classList.toggle('scrolled', window.scrollY > 56);
   }, { passive: true });
 })();
 
-// Mobile menu
+// Mobile menu toggle
 function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('open');
+  var m = document.getElementById('mobileMenu');
+  if(m) m.classList.toggle('open');
 }
 
-// Smooth scroll
+// Smooth scroll para âncoras internas
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click', function(e){
-    var t = document.querySelector(this.getAttribute('href'));
-    if(t){ e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+    var target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
-// Fade-in on scroll
+// Fade-in ao scroll — com fallback imediato se IO não suportado
 (function(){
   var els = document.querySelectorAll('.fi');
+  if(!els.length) return;
+
+  // Fallback: sem IntersectionObserver → mostra tudo imediatamente
   if(!('IntersectionObserver' in window)){
     els.forEach(function(el){ el.classList.add('visible'); });
     return;
   }
+
+  // Com IntersectionObserver
   var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e)
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+
+  els.forEach(function(el){ io.observe(el); });
+
+  // Segurança: após 1.5s, força visible em tudo que ainda não animou
+  // (evita tela preta caso o IO falhe por qualquer motivo)
+  setTimeout(function(){
+    document.querySelectorAll('.fi:not(.visible)').forEach(function(el){
+      el.classList.add('visible');
+    });
+  }, 1500);
+})();
+</script>
+
+</body>
+</html>
