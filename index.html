@@ -9,10 +9,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ETAPA 5: Favicon profissional -->
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="shortcut icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
 
 <!-- ① Title & Description → Bigorrilho -->
 <title>Barbearia Clube | Tradição e Excelência em Curitiba (Bigorrilho)</title>
@@ -614,6 +610,117 @@ ul { list-style: none; }
   .hero__h1 { font-size: 2.3rem; }
   .vis-card { padding: 26px 18px; }
 }
+
+/* ════════════════════════════════════════════════════
+   SEÇÃO DE VÍDEO
+═══════════════════════════════════════════════════ */
+.video-section {
+  background: var(--black);
+  padding: 80px 0;
+  border-top: 1px solid rgba(197,160,89,.12);
+  border-bottom: 1px solid rgba(197,160,89,.12);
+}
+.video-section__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 64px;
+  align-items: center;
+}
+.video-section__title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.video-section__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+.video-section__rule {
+  width: 48px; height: 1px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+.video-section__desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+/* Player */
+.video-section__player {
+  position: relative;
+  border: 1px solid rgba(197,160,89,.3);
+  overflow: hidden;
+  background: var(--navy);
+}
+.video-section__player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+}
+/* Controles */
+.video-section__controls {
+  position: absolute;
+  bottom: 14px; right: 14px;
+  display: flex; gap: 8px;
+}
+.video-btn {
+  width: 38px; height: 38px;
+  background: rgba(8,10,16,.75);
+  border: 1px solid rgba(197,160,89,.4);
+  color: var(--gold);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .25s, border-color .25s;
+  backdrop-filter: blur(4px);
+}
+.video-btn:hover {
+  background: rgba(197,160,89,.15);
+  border-color: var(--gold);
+}
+/* Cantos decorativos dourados */
+.video-section__deco {
+  position: absolute;
+  width: 28px; height: 28px;
+  pointer-events: none;
+}
+.video-section__deco--tl {
+  top: -1px; left: -1px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+.video-section__deco--br {
+  bottom: -1px; right: -1px;
+  border-bottom: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+/* Fallback */
+.video-fallback {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 320px; gap: 12px;
+  color: var(--faint);
+}
+.video-fallback i { font-size: 48px; color: rgba(197,160,89,.3); }
+.video-fallback p { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+/* Responsive */
+@media (max-width: 768px) {
+  .video-section__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .video-section { padding: 60px 0; }
+}
+
 </style>
 </head>
 
@@ -733,6 +840,45 @@ ul { list-style: none; }
 </div>
 
 <!-- ══════════════════════════════════════════════
+     SEÇÃO DE VÍDEO — video.mp4
+════════════════════════════════════════════════ -->
+<section class="video-section" aria-label="Vídeo institucional Barbearia Clube">
+  <div class="video-section__inner">
+    <div class="video-section__text fi">
+      <span class="sh__tag">Veja de perto</span>
+      <h2 class="video-section__title">A Arte por Trás<br><em>de Cada Corte</em></h2>
+      <div class="video-section__rule"></div>
+      <p class="video-section__desc">Mais de 17 anos de tradição, técnica e dedicação. Venha viver a experiência completa da Barbearia Clube no Bigorrilho.</p>
+    </div>
+    <div class="video-section__player fi">
+      <video
+        src="video.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        aria-label="Vídeo institucional da Barbearia Clube"
+        onerror="this.closest('.video-section__player').innerHTML='<div class=\'video-fallback\'><i class=\'fas fa-play-circle\'></i><p>Carregando vídeo...</p></div>'"
+      ></video>
+      <!-- Controles customizados -->
+      <div class="video-section__controls">
+        <button class="video-btn" onclick="toggleVideo(this)" aria-label="Pausar/Reproduzir vídeo">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button class="video-btn" onclick="toggleMute(this)" aria-label="Ativar/Desativar som">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+      </div>
+      <!-- Borda decorativa dourada -->
+      <div class="video-section__deco video-section__deco--tl"></div>
+      <div class="video-section__deco video-section__deco--br"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
      SERVIÇOS & PREÇOS
 ════════════════════════════════════════════════ -->
 <section id="servicos" class="section section--black">
@@ -748,7 +894,6 @@ ul { list-style: none; }
     <article class="vis-card fi" itemscope itemtype="https://schema.org/Service">
       <div class="vis-icon" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
       <div>
-        <div class="vis-badge"><i class="fas fa-gem"></i>Serviço Exclusivo</div>
         <h3 class="vis-title" itemprop="name">Visagismo Masculino</h3>
         <p class="vis-desc" itemprop="description">Técnica que analisa o formato do rosto para definir o corte e barba ideais. Realizado pelo especialista Wagner com mais de 20 anos de experiência em visagismo masculino.</p>
         <div class="vis-checks">
@@ -1390,6 +1535,25 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     });
   }, 1500);
 })();
+
+// Controles do vídeo
+function toggleVideo(btn) {
+  var video = btn.closest('.video-section__player').querySelector('video');
+  if (!video) return;
+  if (video.paused) {
+    video.play();
+    btn.querySelector('i').className = 'fas fa-pause';
+  } else {
+    video.pause();
+    btn.querySelector('i').className = 'fas fa-play';
+  }
+}
+function toggleMute(btn) {
+  var video = btn.closest('.video-section__player').querySelector('video');
+  if (!video) return;
+  video.muted = !video.muted;
+  btn.querySelector('i').className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+}
 </script>
 
 </body>
