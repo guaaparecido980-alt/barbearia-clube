@@ -482,10 +482,12 @@ ul { list-style: none; }
 .tc__bio  { font-size: 13px; color: var(--muted); line-height: 1.72; }
 .tc__exp  { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 11px; color: var(--gold); }
 
-/* Fotos: altura responsiva + posição topo para não cortar rosto */
-.tc--leader .tc__img { height: 320px; object-position: center 15%; }
-.tc--barber .tc__img { height: 280px; object-position: center 10%; }
-.tc--spec .tc__img   { height: 240px; object-position: center 10%; }
+/* Fotos: aspect-ratio responsivo — funciona em qualquer largura de coluna
+   Evita corte do rosto independente do tamanho do card */
+.tc__img-wrap { width: 100%; }
+.tc--leader .tc__img { width: 100%; height: auto; aspect-ratio: 3/4; object-position: center 20%; }
+.tc--barber .tc__img { width: 100%; height: auto; aspect-ratio: 3/4; object-position: center 15%; }
+.tc--spec .tc__img   { width: 100%; height: auto; aspect-ratio: 4/5; object-position: center 15%; }
 
 /* Placeholder imagem */
 .ph-img {
@@ -496,9 +498,9 @@ ul { list-style: none; }
 }
 .ph-img i    { font-size: 30px; color: rgba(197,160,89,.2); }
 .ph-img span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
-.ph--leader  { height: 310px; }
-.ph--barber  { height: 260px; }
-.ph--spec    { height: 230px; }
+.ph--leader  { aspect-ratio: 3/4; }
+.ph--barber  { aspect-ratio: 3/4; }
+.ph--spec    { aspect-ratio: 4/5; }
 
 /* ═════════════════════════════════════════════════════
    DEPOIMENTOS
@@ -615,14 +617,10 @@ ul { list-style: none; }
   .grid-3  { grid-template-columns: 1fr; }
   .grid-4  { grid-template-columns: repeat(2, 1fr); }
   .grid-spec { grid-template-columns: repeat(2, 1fr); }
-  /* Fotos menores no mobile — menos zoom/corte */
-  .tc--leader .tc__img { height: 260px; object-position: center 20%; }
-  .tc--barber .tc__img { height: 220px; object-position: center 15%; }
-  .tc--spec .tc__img   { height: 200px; object-position: center 15%; }
-  /* Placeholder imgs */
-  .ph--leader { height: 260px; }
-  .ph--barber { height: 220px; }
-  .ph--spec   { height: 200px; }
+  /* Fotos: aspect-ratio mantém proporção em qualquer largura */
+  .tc--leader .tc__img { object-position: center 25%; }
+  .tc--barber .tc__img { object-position: center 20%; }
+  .tc--spec .tc__img   { object-position: center 20%; }
   /* Hero stats — menor */
   .hero__sv { font-size: 1.6rem; }
   .hero__div { height: 32px; }
@@ -632,13 +630,10 @@ ul { list-style: none; }
   /* Grids 1 col em telas muito pequenas */
   .grid-4   { grid-template-columns: 1fr; }
   .grid-spec { grid-template-columns: 1fr; }
-  /* Fotos ainda menores — sem risco de cortar rosto */
-  .tc--leader .tc__img { height: 300px; object-position: center 20%; }
-  .tc--barber .tc__img { height: 260px; object-position: center 15%; }
-  .tc--spec .tc__img   { height: 240px; object-position: center 15%; }
-  .ph--leader { height: 300px; }
-  .ph--barber { height: 260px; }
-  .ph--spec   { height: 240px; }
+  /* Fotos: aspect-ratio se adapta — apenas ajustar object-position */
+  .tc--leader .tc__img { object-position: center 30%; }
+  .tc--barber .tc__img { object-position: center 25%; }
+  .tc--spec .tc__img   { object-position: center 25%; }
   /* Hero */
   .hero__h1 { font-size: 2.1rem; }
   .hero__stats { gap: 12px; padding-top: 28px; }
@@ -1000,30 +995,7 @@ ul { list-style: none; }
       <div class="sh__rule"></div>
       <p class="sh__lead">Cada serviço executado com técnica refinada, produtos premium e o cuidado que você merece há mais de 17 anos.</p>
     </div>
-
-    <!-- Visagismo destaque -->
-    <article class="vis-card fi" itemscope itemtype="https://schema.org/Service">
-      <div class="vis-icon" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
-      <div>
-        <h3 class="vis-title" itemprop="name">Visagismo Masculino</h3>
-        <p class="vis-desc" itemprop="description">Técnica que analisa o formato do rosto para definir o corte e barba ideais. Realizado pelo especialista Wagner com mais de 20 anos de experiência em visagismo masculino.</p>
-        <div class="vis-checks">
-          <span class="vis-check"><i class="fas fa-check"></i>Análise facial completa</span>
-          <span class="vis-check"><i class="fas fa-check"></i>Consultoria personalizada</span>
-          <span class="vis-check"><i class="fas fa-check"></i>Resultado exclusivo</span>
-        </div>
-      </div>
-      <div class="vis-price">
-        <p class="vis-plbl">A partir de</p>
-        <p class="vis-pval">R$ 115</p>
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
-           class="btn btn-gold" style="margin-top:18px;font-size:10px;padding:12px 20px;">
-          <i class="fas fa-calendar-check"></i>AGENDAR
-        </a>
-      </div>
-    </article>
-
-    <!-- Grade de preços -->
+        <!-- Grade de preços -->
     <div class="price-grid">
       <article class="price-card fi" itemscope itemtype="https://schema.org/Service">
         <div class="pc-hd"><div class="pc-icon"><i class="fas fa-cut"></i></div><h3 class="pc-title" itemprop="name">Cabelo &amp; Barba</h3></div>
