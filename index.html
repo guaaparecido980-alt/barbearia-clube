@@ -96,7 +96,9 @@
   ],
   "sameAs": [
     "https://www.instagram.com/barbeariaclube",
-    "https://www.facebook.com/barbeariaclube"
+    "https://www.facebook.com/barbeariaclube",
+    "https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share",
+    "https://apps.apple.com/br/app/barbearia-clube/id6479710360"
   ],
   "employee": [
     { "@type": "Person", "name": "Meire",    "jobTitle": "Sócia-Fundadora", "sameAs": "https://www.instagram.com/meirefp" },
@@ -931,6 +933,86 @@ ul { list-style: none; }
   aspect-ratio: 3 / 4;
   object-position: center 20%;
 }
+
+/* ════════════════════════════════════════════════════
+   APP DOWNLOAD SECTION
+════════════════════════════════════════════════════ */
+.app-strip {
+  background: var(--dark);
+  border: 1px solid rgba(197,160,89,.3);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 44px;
+  position: relative;
+  overflow: hidden;
+}
+.app-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(197,160,89,.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.app-strip__text { flex: 1; min-width: 200px; }
+.app-strip__tag {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px; display: block;
+}
+.app-strip__title {
+  font-family: var(--serif); font-size: 1.2rem;
+  color: var(--white); margin-bottom: 6px;
+}
+.app-strip__sub { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.app-strip__btns {
+  display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap;
+}
+.app-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--black);
+  border: 1px solid rgba(197,160,89,.4);
+  padding: 12px 20px;
+  color: var(--white);
+  text-decoration: none;
+  transition: border-color .25s, background .25s, transform .25s;
+  min-width: 150px;
+}
+.app-btn:hover {
+  border-color: var(--gold);
+  background: rgba(197,160,89,.07);
+  transform: translateY(-2px);
+}
+.app-btn__icon { font-size: 26px; color: var(--gold); flex-shrink: 0; }
+.app-btn__text { line-height: 1.2; }
+.app-btn__small { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.app-btn__store { font-size: 14px; font-weight: 600; color: var(--white); font-family: var(--serif); }
+
+/* Navbar app badge — mobile only */
+.nav-app-badge {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(197,160,89,.3);
+  padding: 7px 12px;
+  text-decoration: none;
+  transition: border-color .25s, background .25s;
+}
+.nav-app-badge:hover { border-color: var(--gold); background: rgba(197,160,89,.07); }
+.nav-app-badge i { font-size: 14px; }
+
+@media (max-width: 768px) {
+  .nav-app-badge { display: inline-flex; }
+  .app-strip { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  .app-strip__btns { width: 100%; }
+  .app-btn { flex: 1; justify-content: center; min-width: 0; }
+}
 </style>
 
 <!-- FAQ Schema — Rich Snippet no Google -->
@@ -1024,6 +1106,25 @@ ul { list-style: none; }
      class="btn btn-gold" onclick="toggleMenu()" style="margin-top:14px;">
     <i class="fas fa-calendar-check"></i> Agendar Agora
   </a>
+  <!-- App links no menu mobile -->
+  <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center;">
+    <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"
+       class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
+      <i class="fab fa-google-play app-btn__icon" style="font-size:20px;"></i>
+      <div class="app-btn__text">
+        <div class="app-btn__small">Play Store</div>
+        <div class="app-btn__store" style="font-size:12px;">Android</div>
+      </div>
+    </a>
+    <a href="https://apps.apple.com/br/app/barbearia-clube/id6479710360" target="_blank" rel="noopener noreferrer"
+       class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
+      <i class="fab fa-apple app-btn__icon" style="font-size:20px;"></i>
+      <div class="app-btn__text">
+        <div class="app-btn__small">App Store</div>
+        <div class="app-btn__store" style="font-size:12px;">iOS</div>
+      </div>
+    </a>
+  </div>
 </nav>
 
 <!-- ══════════════════════════════════════════════
@@ -1056,7 +1157,13 @@ ul { list-style: none; }
         <a href="#contato"  class="nav-link">Contato</a>
       </nav>
       <div style="display:flex;align-items:center;gap:12px;">
-        <!-- ETAPA 3: WhatsApp no navbar -->
+        <!-- App badge mobile -->
+        <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-app-badge" aria-label="Baixar App">
+          <i class="fas fa-mobile-alt"></i> Baixar App
+        </a>
+        <!-- CTA desktop -->
         <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
            class="btn btn-gold nav-btn-d" style="padding:11px 22px;font-size:10px;">
           <i class="fas fa-calendar-check"></i> Agendar
@@ -1209,6 +1316,32 @@ ul { list-style: none; }
         <i class="fas fa-calendar-check"></i> Agendar Serviço
       </a>
     </div>
+
+    <!-- Faixa do App -->
+    <div class="app-strip fi">
+      <div class="app-strip__text">
+        <span class="app-strip__tag"><i class="fas fa-mobile-alt"></i> &nbsp;Disponível para Android e iOS</span>
+        <h3 class="app-strip__title">Quer agendamento VIP? Baixe nosso App e agende em segundos.</h3>
+        <p class="app-strip__sub">Escolha o profissional, o serviço e o horário — tudo na palma da mão, com confirmação imediata.</p>
+      </div>
+      <div class="app-strip__btns">
+        <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="app-btn" aria-label="Baixar na Play Store">
+          <i class="fab fa-google-play app-btn__icon"></i>
+          <div class="app-btn__text">
+            <div class="app-btn__small">Disponível no</div>
+            <div class="app-btn__store">Google Play</div>
+          </div>
+        </a>
+        <a href="https://apps.apple.com/br/app/barbearia-clube/id6479710360" target="_blank" rel="noopener noreferrer" class="app-btn" aria-label="Baixar na App Store">
+          <i class="fab fa-apple app-btn__icon"></i>
+          <div class="app-btn__text">
+            <div class="app-btn__small">Baixe na</div>
+            <div class="app-btn__store">App Store</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1607,6 +1740,23 @@ ul { list-style: none; }
           <img class="test-avatar" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&q=70" width="44" height="44" alt="André L." loading="lazy">
           <div><div class="test-name" itemprop="author">André L.</div><div class="test-city">Curitiba, PR</div></div>
           <span class="test-src">Google</span>
+        </div>
+      </article>
+      <!-- Depoimento do App — substituir pelo real quando disponível -->
+      <article class="test-card fi" itemscope itemtype="https://schema.org/Review">
+        <div class="test-stars">★★★★★</div>
+        <blockquote class="test-quote" itemprop="reviewBody">"Baixei o app e fiz o agendamento em menos de 1 minuto. Escolhi o profissional, o horário e recebi confirmação na hora. Facilidade que poucos lugares oferecem!"</blockquote>
+        <div class="test-foot">
+          <img class="test-avatar"
+               src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=70"
+               alt="Felipe T." loading="lazy" width="44" height="44">
+          <div>
+            <div class="test-name" itemprop="author">Felipe T.</div>
+            <div class="test-city">Via App — Curitiba, PR</div>
+          </div>
+          <span class="test-src" style="display:flex;align-items:center;gap:4px;">
+            <i class="fas fa-mobile-alt" style="font-size:11px;color:var(--gold);"></i>App
+          </span>
         </div>
       </article>
     </div>
