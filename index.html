@@ -98,7 +98,7 @@
     "https://www.facebook.com/barbeariaclube"
   ],
   "employee": [
-    { "@type": "Person", "name": "Meire",    "jobTitle": "Sócia-Fundadora" },
+    { "@type": "Person", "name": "Meire",    "jobTitle": "Sócia-Fundadora", "sameAs": "https://www.instagram.com/meirefp" },
     { "@type": "Person", "name": "Wagner",   "jobTitle": "Sócio & Barbeiro Sênior — Visagismo", "sameAs": "https://www.instagram.com/owagneralvess" },
     { "@type": "Person", "name": "Juliano",  "jobTitle": "Sócio & Gestor", "sameAs": "https://www.instagram.com/julianobarross" },
     { "@type": "Person", "name": "Perez",    "jobTitle": "Barbeiro Sênior", "sameAs": "https://www.instagram.com/perezbarbeiro" },
@@ -108,10 +108,10 @@
     { "@type": "Person", "name": "Pedro",    "jobTitle": "Barbeiro", "sameAs": "https://www.instagram.com/pedroperez_barbeiro" },
     { "@type": "Person", "name": "Gabriel",  "jobTitle": "Barbeiro", "sameAs": "https://www.instagram.com/g.basniak/" },
     { "@type": "Person", "name": "Emerson",  "jobTitle": "Barbeiro", "sameAs": "https://www.instagram.com/emersonchemimm/" },
-    { "@type": "Person", "name": "Patricia", "jobTitle": "Manicure" },
-    { "@type": "Person", "name": "Liliane",  "jobTitle": "Manicure" },
-    { "@type": "Person", "name": "Drielli",  "jobTitle": "Massoterapeuta" },
-    { "@type": "Person", "name": "Sirlene",  "jobTitle": "Podóloga" }
+    { "@type": "Person", "name": "Patricia", "jobTitle": "Manicure & Podóloga", "sameAs": "https://www.instagram.com/pati_podologa" },
+    { "@type": "Person", "name": "Liliane",  "jobTitle": "Manicure", "sameAs": "https://www.instagram.com/eulilianekutesk" },
+    { "@type": "Person", "name": "Drielli",  "jobTitle": "Massoterapeuta", "sameAs": "https://www.instagram.com/driellialbinni" },
+    { "@type": "Person", "name": "Sirlene",  "jobTitle": "Podóloga", "sameAs": "https://www.instagram.com/sirlenebartzpodologia" }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -632,7 +632,14 @@ ul { list-style: none; }
     <div class="navbar__inner">
       <!-- ETAPA 5: Logo profissional BC -->
       <a href="#inicio" class="logo" aria-label="Barbearia Clube — Início">
-        <div class="logo__diamond"><span class="logo__ltr">BC</span></div>
+        <div class="logo__img-wrap">
+          <img src="logo.png"
+               alt="Barbearia Clube"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+               style="height:44px;width:auto;display:block;object-fit:contain;">
+          <!-- Fallback BC diamante se logo.png não existir -->
+          <div class="logo__diamond" style="display:none;"><span class="logo__ltr">BC</span></div>
+        </div>
         <div class="logo__txt">
           <div class="logo__brand">Barbearia</div>
           <div class="logo__sub">Clube</div>
@@ -1078,7 +1085,7 @@ ul { list-style: none; }
         </div>
         <div class="tc__body">
           <h4 class="tc__name" itemprop="name">PATRICIA</h4>
-          <p class="tc__role">Manicure</p>
+          <p class="tc__role">Manicure &amp; Podóloga</p>
         </div>
       </article>
 
@@ -1208,7 +1215,13 @@ ul { list-style: none; }
       <!-- Col 1: Logo + Endereço + Mapa -->
       <div>
         <a href="#inicio" class="logo" style="margin-bottom:24px;display:inline-flex;" aria-label="Topo">
-          <div class="logo__diamond"><span class="logo__ltr">BC</span></div>
+          <div class="logo__img-wrap">
+            <img src="logo.png"
+                 alt="Barbearia Clube"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                 style="height:40px;width:auto;display:block;object-fit:contain;">
+            <div class="logo__diamond" style="display:none;"><span class="logo__ltr">BC</span></div>
+          </div>
           <div class="logo__txt" style="margin-left:13px;">
             <div class="logo__brand">Barbearia</div>
             <div class="logo__sub">Clube</div>
@@ -1248,7 +1261,7 @@ ul { list-style: none; }
         </div>
         <div style="margin-top:26px;">
           <h4 class="footer__h"><i class="fas fa-envelope"></i>E-mail</h4>
-          <p style="font-size:13.5px;color:var(--muted);">contato@barbeariaclube.com.br</p>
+          <p style="font-size:13.5px;color:var(--muted);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="086b67667c697c67486a697a6a6d697a61696b647d6a6d266b6765266a7a">[email&#160;protected]</a></p>
           <p style="font-size:13.5px;color:var(--muted);margin-top:5px;">barbeariaclube.com.br</p>
         </div>
       </div>
@@ -1307,7 +1320,7 @@ ul { list-style: none; }
 <!-- ══════════════════════════════════════════════
      SCRIPTS
 ════════════════════════════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Navbar shrink
 (function(){
   var nb = document.getElementById('navbar');
@@ -1337,13 +1350,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     return;
   }
   var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
-  els.forEach(function(el){ io.observe(el); });
-})();
-</script>
-
-</body>
-</html>
+    entries.forEach(function(e)
