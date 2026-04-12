@@ -671,6 +671,9 @@ ul { list-style: none; }
   .grid-3   { grid-template-columns: 1fr; }
   .grid-4   { grid-template-columns: repeat(2, 1fr); }
   .grid-spec { grid-template-columns: repeat(2, 1fr); }
+  /* Sub-títulos centralizados no mobile */
+  .sub-title { justify-content: center; text-align: center; }
+  .sub-title::after { display: none; }
 
   /* Fotos */
   .tc--leader .tc__img { object-position: center 25%; }
@@ -683,18 +686,25 @@ ul { list-style: none; }
   .hero__stats { gap: 16px; }
 
   /* App strip */
-  .app-strip { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  .app-strip__btns { width: 100%; }
+  .app-strip { padding: 24px 20px; flex-direction: column; align-items: center; text-align: center; }
+  .app-strip__btns { width: 100%; justify-content: center; }
+  .app-strip__text { text-align: center; }
   .app-btn { flex: 1; justify-content: center; min-width: 0; }
   .app-btn__store { font-size: 13px; }
 
   /* Vídeo */
   .video-section__inner { grid-template-columns: 1fr; gap: 36px; }
   .video-section { padding: 60px 0; }
+  .video-section__text { text-align: center; }
+  .video-section__rule { margin: 0 auto 20px; }
 
   /* Footer */
   .footer__grid { gap: 36px; padding: 52px 0 40px; }
   .map-embed    { height: 140px; }
+  .footer__h, .footer__addr, .footer__ct { text-align: center; justify-content: center; }
+  .footer__links a { justify-content: center; }
+  .footer__socials { justify-content: center; }
+  .footer__bot-inner { justify-content: center; text-align: center; }
 
   /* Cookie banner */
   .cookie-banner { padding-bottom: 80px; }
@@ -721,6 +731,10 @@ ul { list-style: none; }
 
   /* Pacotes Noivo */
   .pkg-grid { grid-template-columns: 1fr; }
+  /* Price cards centralizados */
+  .price-card { text-align: center; }
+  .pc-hd { justify-content: center; }
+  .pr-row { text-align: left; }
 
   /* Botões gerais */
   .btn { padding: 14px 22px; font-size: 10px; letter-spacing: 1.5px; }
