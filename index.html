@@ -98,7 +98,7 @@
     "https://www.instagram.com/barbeariaclube",
     "https://www.facebook.com/barbeariaclube",
     "https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share",
-    "https://apps.apple.com/br/app/barbearia-clube/id6479710360"
+    "https://apps.apple.com/br/app/barbearia-clube-merc%C3%AAs/id6498927462"
   ],
   "employee": [
     { "@type": "Person", "name": "Meire",    "jobTitle": "Sócia-Fundadora", "sameAs": "https://www.instagram.com/meirefp" },
@@ -939,22 +939,30 @@ ul { list-style: none; }
 ════════════════════════════════════════════════════ */
 .app-strip {
   background: var(--dark);
-  border: 1px solid rgba(197,160,89,.3);
-  padding: 32px 40px;
+  border: 1px solid rgba(197,160,89,.35);
+  padding: 36px 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 32px;
   flex-wrap: wrap;
   margin-top: 44px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 40px rgba(197,160,89,.06);
 }
 .app-strip::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(197,160,89,.06) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(197,160,89,.08) 0%, transparent 55%);
+  pointer-events: none;
+}
+.app-strip::after {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(197,160,89,.6), transparent);
   pointer-events: none;
 }
 .app-strip__text { flex: 1; min-width: 200px; }
@@ -990,21 +998,26 @@ ul { list-style: none; }
 .app-btn__small { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
 .app-btn__store { font-size: 14px; font-weight: 600; color: var(--white); font-family: var(--serif); }
 
-/* Navbar app badge — mobile only */
+/* Navbar app badge — aparece em mobile e desktop */
 .nav-app-badge {
-  display: none;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-size: 9px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
   border: 1px solid rgba(197,160,89,.3);
-  padding: 7px 12px;
+  padding: 8px 14px;
   text-decoration: none;
-  transition: border-color .25s, background .25s;
+  transition: border-color .25s, background .25s, transform .25s;
+  white-space: nowrap;
 }
-.nav-app-badge:hover { border-color: var(--gold); background: rgba(197,160,89,.07); }
+.nav-app-badge:hover {
+  border-color: var(--gold);
+  background: rgba(197,160,89,.07);
+  transform: translateY(-1px);
+}
 .nav-app-badge i { font-size: 14px; }
 
 @media (max-width: 768px) {
@@ -1108,7 +1121,7 @@ ul { list-style: none; }
   </a>
   <!-- App links no menu mobile -->
   <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center;">
-    <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"
+    <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" data-app="android" target="_blank" rel="noopener noreferrer"
        class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
       <i class="fab fa-google-play app-btn__icon" style="font-size:20px;"></i>
       <div class="app-btn__text">
@@ -1116,7 +1129,7 @@ ul { list-style: none; }
         <div class="app-btn__store" style="font-size:12px;">Android</div>
       </div>
     </a>
-    <a href="https://apps.apple.com/br/app/barbearia-clube/id6479710360" target="_blank" rel="noopener noreferrer"
+    <a href="https://apps.apple.com/br/app/barbearia-clube-merc%C3%AAs/id6498927462" data-app="ios" target="_blank" rel="noopener noreferrer"
        class="app-btn" onclick="toggleMenu()" style="padding:10px 16px;min-width:0;flex:1;justify-content:center;">
       <i class="fab fa-apple app-btn__icon" style="font-size:20px;"></i>
       <div class="app-btn__text">
@@ -1157,10 +1170,10 @@ ul { list-style: none; }
         <a href="#contato"  class="nav-link">Contato</a>
       </nav>
       <div style="display:flex;align-items:center;gap:12px;">
-        <!-- App badge mobile -->
-        <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share"
+        <!-- App badge — detecção automática iOS/Android -->
+        <a id="navAppBadge" href="#"
            target="_blank" rel="noopener noreferrer"
-           class="nav-app-badge" aria-label="Baixar App">
+           class="nav-app-badge" aria-label="Baixar App Barbearia Clube">
           <i class="fas fa-mobile-alt"></i> Baixar App
         </a>
         <!-- CTA desktop -->
@@ -1325,14 +1338,16 @@ ul { list-style: none; }
         <p class="app-strip__sub">Escolha o profissional, o serviço e o horário — tudo na palma da mão, com confirmação imediata.</p>
       </div>
       <div class="app-strip__btns">
-        <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="app-btn" aria-label="Baixar na Play Store">
+        <a href="https://play.google.com/store/apps/details?id=br.com.programasalao.barbeariaclube&pcampaignid=web_share" data-app="android" target="_blank" rel="noopener noreferrer"
+           class="app-btn" aria-label="Baixar na Google Play Store">
           <i class="fab fa-google-play app-btn__icon"></i>
           <div class="app-btn__text">
             <div class="app-btn__small">Disponível no</div>
             <div class="app-btn__store">Google Play</div>
           </div>
         </a>
-        <a href="https://apps.apple.com/br/app/barbearia-clube/id6479710360" target="_blank" rel="noopener noreferrer" class="app-btn" aria-label="Baixar na App Store">
+        <a href="https://apps.apple.com/br/app/barbearia-clube-merc%C3%AAs/id6498927462" data-app="ios" target="_blank" rel="noopener noreferrer"
+           class="app-btn" aria-label="Baixar na Apple App Store">
           <i class="fab fa-apple app-btn__icon"></i>
           <div class="app-btn__text">
             <div class="app-btn__small">Baixe na</div>
@@ -2042,6 +2057,40 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 })();
 
 // Controles do vídeo
+
+// ── Detecção inteligente de plataforma para links do App ──
+(function() {
+  var IOS     =  + APP_IOS + ;
+  var ANDROID =  + APP_ANDROID + ;
+
+  function getAppLink() {
+    var ua = navigator.userAgent || '';
+    // iOS: iPhone, iPad, iPod
+    if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return IOS;
+    // Android
+    if (/android/i.test(ua)) return ANDROID;
+    // Desktop/outros: Play Store (mais downloads)
+    return ANDROID;
+  }
+
+  // Badge da navbar
+  var badge = document.getElementById('navAppBadge');
+  if (badge) badge.href = getAppLink();
+
+  // Todos os botões com data-app-platform
+  document.querySelectorAll('[data-app="auto"]').forEach(function(el) {
+    el.href = getAppLink();
+  });
+
+  // Botões específicos por plataforma
+  document.querySelectorAll('[data-app="ios"]').forEach(function(el) {
+    el.href = IOS;
+  });
+  document.querySelectorAll('[data-app="android"]').forEach(function(el) {
+    el.href = ANDROID;
+  });
+})();
+
 // FAQ accordion
 function toggleFaq(btn) {
   var isOpen = btn.getAttribute('aria-expanded') === 'true';
