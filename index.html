@@ -169,6 +169,7 @@
       "reviewBody": "Além do corte e barba impecáveis, a massagem relaxante é incrível. Momento de autocuidado que todo homem merece."
     }
   ],
+  "makesOffer": { "@type": "Offer", "seller": { "@type": "Person", "name": "Gustavo Digital", "url": "https://gustavodigital.online" } },
   "potentialAction": {
     "@type": "ReserveAction",
     "target": {
@@ -1136,6 +1137,37 @@ ul { list-style: none; }
   .app-btn { flex: 1; justify-content: center; min-width: 0; }
   .app-btn__store { font-size: 13px; }
 }
+
+/* ── Crédito desenvolvedor ── */
+.dev-credit {
+  border-top: 1px solid rgba(197,160,89,.08);
+  padding: 14px 0;
+  text-align: center;
+}
+.dev-credit a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  text-decoration: none;
+  font-family: var(--sans);
+  transition: color .3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.dev-credit a:hover { color: #F5A623; }
+.dev-credit a::before {
+  content: '✦';
+  font-size: 8px;
+  color: rgba(197,160,89,.3);
+}
+.dev-credit a::after {
+  content: '✦';
+  font-size: 8px;
+  color: rgba(197,160,89,.3);
+}
+.dev-credit strong { color: rgba(255,255,255,.35); font-weight: 500; }
 </style>
 
 <!-- FAQ Schema — Rich Snippet no Google -->
@@ -2119,6 +2151,14 @@ ul { list-style: none; }
         <p class="footer__tagline">A barbearia mais experiente de Curitiba.</p>
       </div>
     </div>
+  </div>
+
+  <!-- Crédito desenvolvedor -->
+  <div class="dev-credit">
+    <a href="https://gustavodigital.online" target="_blank" rel="noopener noreferrer"
+       aria-label="Site desenvolvido por Gustavo Digital">
+      Desenvolvido por <strong>Gustavo Digital</strong>
+    </a>
   </div>
 </footer>
 
