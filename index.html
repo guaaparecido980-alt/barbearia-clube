@@ -8,13 +8,21 @@
 ════════════════════════════════════════════════════ -->
 <meta charset="UTF-8">
 
-<!-- Google tag (gtag.js) — Google Ads AW-385059756 -->
+<!-- Google tag (gtag.js) — Google Ads + Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-385059756"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
+  // Google Ads
   gtag('config', 'AW-385059756');
+
+  // Google Analytics 4
+  gtag('config', 'G-3FV79V0V0G', {
+    'page_title': document.title,
+    'page_location': window.location.href
+  });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="favicon.png">
