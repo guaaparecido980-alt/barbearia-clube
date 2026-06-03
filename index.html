@@ -157,7 +157,8 @@ fbq('track', 'PageView');
     "@type": "OfferCatalog",
     "name": "Serviços Barbearia Clube",
     "itemListElement": [
-      { "@type": "Offer", "name": "Visagismo Masculino",      "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Corte Visagismo", "price": "499", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Consultoria Completa de Visagismo", "price": "790", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
       { "@type": "Offer", "name": "Corte",                    "price": "115", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
       { "@type": "Offer", "name": "Passada de Máquina",       "price": "60",  "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
       { "@type": "Offer", "name": "Tintura",                  "price": "100", "priceCurrency": "BRL", "availability": "https://schema.org/InStock" },
@@ -1195,6 +1196,252 @@ ul { list-style: none; }
   color: rgba(197,160,89,.3);
 }
 .dev-credit strong { color: rgba(255,255,255,.35); font-weight: 500; }
+
+/* ════════════════════════════════════════════════════════
+   SEÇÃO VISAGISMO PREMIUM
+════════════════════════════════════════════════════════ */
+.vis-section {
+  background: var(--black);
+  border-bottom: 1px solid rgba(197,160,89,.15);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.vis-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(197,160,89,.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.vis-hero {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 64px;
+  position: relative;
+}
+.vis-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.vis-hero__eyebrow::before,
+.vis-hero__eyebrow::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+.vis-hero__title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.vis-hero__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+.vis-hero__sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.85;
+  max-width: 560px;
+  margin: 0 auto;
+}
+/* Pacotes */
+.vis-packages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+.vis-pkg {
+  background: var(--dark);
+  border: 1px solid rgba(197,160,89,.2);
+  padding: 44px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+}
+.vis-pkg:hover {
+  border-color: rgba(197,160,89,.6);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.vis-pkg--featured {
+  border-color: rgba(197,160,89,.5);
+  background: linear-gradient(160deg, rgba(197,160,89,.09) 0%, var(--dark) 60%);
+}
+.vis-pkg__ribbon {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+}
+.vis-pkg__icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(197,160,89,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.vis-pkg__name {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.vis-pkg__title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.vis-pkg__desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(197,160,89,.1);
+}
+.vis-pkg__items {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.vis-pkg__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(197,160,89,.06);
+}
+.vis-pkg__item:last-child { border-bottom: none; }
+.vis-pkg__item i {
+  color: var(--gold);
+  font-size: 10px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.vis-pkg__price {
+  margin-bottom: 28px;
+}
+.vis-pkg__price-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 4px;
+}
+.vis-pkg__price-val {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.vis-pkg__price-val span {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+/* Wagner profile */
+.vis-wagner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  background: rgba(197,160,89,.05);
+  border: 1px solid rgba(197,160,89,.18);
+}
+.vis-wagner__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid rgba(197,160,89,.4);
+  flex-shrink: 0;
+}
+.vis-wagner__avatar-ph {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid rgba(197,160,89,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.vis-wagner__info { flex: 1; }
+.vis-wagner__name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+.vis-wagner__role {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.vis-wagner__bio {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .vis-packages { grid-template-columns: 1fr; max-width: 480px; }
+  .vis-pkg { padding: 36px 28px; }
+  .vis-wagner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 560px) {
+  .vis-pkg { padding: 28px 20px; }
+  .vis-pkg__price-val { font-size: 2.2rem; }
+}
+
+@media (max-width: 640px) {
+  .vis-wagner { flex-wrap: wrap; }
+  .vis-wagner .vis-wagner__info { min-width: 0; }
+}
+@media (max-width: 560px) {
+  .vis-packages + div > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
 </style>
 
 <!-- FAQ Schema — Rich Snippet no Google -->
@@ -1284,7 +1531,7 @@ ul { list-style: none; }
   <a href="#equipe"   class="mob-link" onclick="toggleMenu()">Equipe</a>
   <a href="#contato"  class="mob-link" onclick="toggleMenu()">Contato</a>
   <!-- ETAPA 3: WhatsApp como CTA principal -->
-  <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
+  <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer"
      class="btn btn-gold" onclick="toggleMenu()" style="margin-top:14px;">
     <i class="fas fa-calendar-check"></i> Agendar Agora
   </a>
@@ -1332,6 +1579,7 @@ ul { list-style: none; }
         </div>
       </a>
       <nav class="nav-links" role="navigation" aria-label="Principal">
+        <a href="#visagismo" class="nav-link">Visagismo</a>
         <a href="#inicio"   class="nav-link">Início</a>
         <a href="#servicos" class="nav-link">Serviços</a>
         <a href="#noivo"    class="nav-link">Dia do Noivo</a>
@@ -1346,7 +1594,7 @@ ul { list-style: none; }
           <i class="fas fa-mobile-alt"></i> Baixar App
         </a>
         <!-- CTA desktop -->
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer"
            class="btn btn-gold nav-btn-d" style="padding:11px 22px;font-size:10px;">
           <i class="fas fa-calendar-check"></i> Agendar
         </a>
@@ -1377,7 +1625,7 @@ ul { list-style: none; }
     </p>
     <!-- ETAPA 3: CTA principal = WhatsApp -->
     <div class="hero__ctas">
-      <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+      <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
         <i class="fas fa-calendar-check"></i> Agendar Agora
       </a>
       <a href="#servicos" class="btn btn-outline">
@@ -1456,6 +1704,131 @@ ul { list-style: none; }
 <!-- ══════════════════════════════════════════════
      SERVIÇOS & PREÇOS
 ════════════════════════════════════════════════ -->
+
+<!-- ══════════════════════════════════════════════
+     SEÇÃO VISAGISMO PREMIUM — Wagner Alves
+     Destaque logo acima da dobra / serviços
+════════════════════════════════════════════════ -->
+<section id="visagismo" class="vis-section" aria-label="Visagismo Masculino Barbearia Clube">
+  <div class="container">
+
+    <!-- Cabeçalho -->
+    <div class="vis-hero fi">
+      <div class="vis-hero__eyebrow">Especialidade Exclusiva</div>
+      <h2 class="vis-hero__title">Visagismo<br><em>Masculino de Elite</em></h2>
+      <p class="vis-hero__sub">
+        Muito além de um corte. O visagismo analisa o formato do seu rosto, estilo de vida e personalidade
+        para criar o look ideal — exclusivo para você. Realizado pelo especialista <strong style="color:var(--white);">Wagner</strong>, com 24 anos de experiência.
+      </p>
+    </div>
+
+    <!-- Pacotes -->
+    <div class="vis-packages">
+
+      <!-- PACOTE 1: Corte Visagismo -->
+      <article class="vis-pkg fi" itemscope itemtype="https://schema.org/Offer">
+        <div class="vis-pkg__icon"><i class="fas fa-cut"></i></div>
+        <p class="vis-pkg__name">Pacote Essencial</p>
+        <h3 class="vis-pkg__title" itemprop="name">Corte Visagismo</h3>
+        <p class="vis-pkg__desc" itemprop="description">
+          O corte certo para o seu rosto. Wagner analisa seu formato facial e cria o corte que mais valoriza seus traços, com técnica e precisão.
+        </p>
+        <ul class="vis-pkg__items">
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Análise do formato facial</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Corte personalizado por Wagner</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Acabamento premium</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Dicas de manutenção em casa</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Produtos profissionais inclusos</li>
+        </ul>
+        <div class="vis-pkg__price">
+          <p class="vis-pkg__price-label">Investimento</p>
+          <p class="vis-pkg__price-val" itemprop="price" content="499"><span>R$&nbsp;</span>499</p>
+        </div>
+        <a href="https://wa.me/554130149413?text=Olá!%20Tenho%20interesse%20no%20pacote%20Corte%20Visagismo%20(R%24%20499).%20Gostaria%20de%20mais%20informações%20e%20agendar%20uma%20consulta%20com%20o%20Wagner." target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline" style="width:100%;justify-content:center;">
+          <i class="fab fa-whatsapp"></i> Agendar Corte Visagismo
+        </a>
+      </article>
+
+      <!-- PACOTE 2: Consultoria Completa -->
+      <article class="vis-pkg vis-pkg--featured fi" itemscope itemtype="https://schema.org/Offer">
+        <div class="vis-pkg__ribbon">Completo</div>
+        <div class="vis-pkg__icon"><i class="fas fa-user-tie"></i></div>
+        <p class="vis-pkg__name">Consultoria Completa</p>
+        <h3 class="vis-pkg__title" itemprop="name">Visagismo Premium</h3>
+        <p class="vis-pkg__desc" itemprop="description">
+          A experiência completa de transformação. Consultoria aprofundada, análise de estilo, corte visagista, barba personalizada e muito mais — tudo documentado para você replicar.
+        </p>
+        <ul class="vis-pkg__items">
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Consultoria de imagem completa</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Análise de estilo e personalidade</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Corte visagista exclusivo</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Design de barba personalizado</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Dossiê completo do seu look</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Recomendação de produtos</li>
+          <li class="vis-pkg__item"><i class="fas fa-check"></i>Acompanhamento pós-atendimento</li>
+        </ul>
+        <div class="vis-pkg__price">
+          <p class="vis-pkg__price-label">Investimento</p>
+          <p class="vis-pkg__price-val" itemprop="price" content="790"><span>R$&nbsp;</span>790</p>
+        </div>
+        <a href="https://wa.me/554130149413?text=Olá!%20Tenho%20interesse%20na%20Consultoria%20Completa%20de%20Visagismo%20(R%24%20790).%20Gostaria%20de%20mais%20informações%20e%20agendar%20com%20o%20Wagner." target="_blank" rel="noopener noreferrer"
+           class="btn btn-gold" style="width:100%;justify-content:center;">
+          <i class="fas fa-calendar-check"></i> Agendar Consultoria Completa
+        </a>
+      </article>
+
+    </div>
+
+    <!-- Especialistas em Visagismo -->
+    <div class="fi" style="max-width:900px;margin:0 auto;">
+      <p style="text-align:center;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;">Nossos Especialistas em Visagismo</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+        <!-- Wagner -->
+        <div class="vis-wagner" style="margin:0;">
+          <img src="wagner.png"
+               class="vis-wagner__avatar"
+               alt="Wagner — Especialista em Visagismo Masculino"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="vis-wagner__avatar-ph" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <div class="vis-wagner__info">
+            <p class="vis-wagner__name">Wagner Alves</p>
+            <p class="vis-wagner__role">Visagismo Masculino · 24 Anos</p>
+            <p class="vis-wagner__bio">Sócio-fundador. Referência em visagismo masculino de Curitiba. Cada corte é criado exclusivamente para o seu rosto.</p>
+          </div>
+          <a href="https://www.instagram.com/owagneralvess" target="_blank" rel="noopener noreferrer me"
+             class="btn btn-outline" style="padding:10px 14px;font-size:9px;white-space:nowrap;flex-shrink:0;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <!-- Emerson -->
+        <div class="vis-wagner" style="margin:0;">
+          <img src="emerson.png"
+               class="vis-wagner__avatar"
+               alt="Emerson — Especialista em Visagismo — Barbearia Clube"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="vis-wagner__avatar-ph" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <div class="vis-wagner__info">
+            <p class="vis-wagner__name">Emerson</p>
+            <p class="vis-wagner__role">Visagismo Masculino · 9 Anos</p>
+            <p class="vis-wagner__bio">Formado em visagismo masculino. Une técnica apurada e sensibilidade estética para criar o look ideal para cada cliente.</p>
+          </div>
+          <a href="https://www.instagram.com/emersonchemimm/" target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline" style="padding:10px 14px;font-size:9px;white-space:nowrap;flex-shrink:0;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="servicos" class="section section--black">
   <div class="container">
     <div class="sh fi">
@@ -1494,7 +1867,7 @@ ul { list-style: none; }
     </div>
 
     <div style="text-align:center;" class="fi">
-      <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+      <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20gostaria%20de%20agendar%20um%20servi%C3%A7o.%20Pode%20me%20ajudar%20com%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
         <i class="fas fa-calendar-check"></i> Agendar Serviço
       </a>
     </div>
@@ -1554,7 +1927,7 @@ ul { list-style: none; }
           <div class="pkg-item"><i class="fas fa-check"></i>Retirada de Pelos Faciais</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Quick Massage</div>
         </div>
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">Agendar</a>
+        <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20tenho%20interesse%20no%20Pacote%20Dia%20do%20Noivo%20Bronze%20%28R%24%20450%29.%20Gostaria%20de%20saber%20a%20disponibilidade%20e%20agendar.%20%F0%9F%92%8D" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">Agendar</a>
       </article>
 
       <article class="pkg-card fi" itemscope itemtype="https://schema.org/Offer">
@@ -1570,7 +1943,7 @@ ul { list-style: none; }
           <div class="pkg-item"><i class="fas fa-check"></i>Hidratação Facial</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Massagem Relaxante</div>
         </div>
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">Agendar</a>
+        <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20tenho%20interesse%20no%20Pacote%20Dia%20do%20Noivo%20Prata%20%28R%24%20560%29.%20Gostaria%20de%20saber%20a%20disponibilidade%20e%20agendar.%20%F0%9F%92%8D" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;">Agendar</a>
       </article>
 
       <article class="pkg-card pkg-card--ft fi" itemscope itemtype="https://schema.org/Offer">
@@ -1587,7 +1960,7 @@ ul { list-style: none; }
           <div class="pkg-item"><i class="fas fa-check"></i>Faxina na Cara</div>
           <div class="pkg-item"><i class="fas fa-check"></i>Podologia</div>
         </div>
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;justify-content:center;">
+        <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20tenho%20interesse%20no%20Pacote%20Dia%20do%20Noivo%20Ouro%20%28R%24%20730%29.%20Gostaria%20de%20saber%20a%20disponibilidade%20e%20agendar.%20%F0%9F%92%8D" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;justify-content:center;">
           <i class="fas fa-calendar-check"></i> Reservar Pacote Ouro
         </a>
       </article>
@@ -2065,7 +2438,7 @@ ul { list-style: none; }
       <div class="sh__rule"></div>
       <p class="sh__lead">Fale diretamente com a gente. Escolha o profissional, o serviço e o horário ideal. Resposta rápida, atendimento VIP.</p>
       <div class="booking__ctas">
-        <a href="https://wa.me/554130149413" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size:13px;padding:18px 48px;">
+        <a href="https://wa.me/554130149413?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Barbearia%20Clube%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size:13px;padding:18px 48px;">
           <i class="fas fa-calendar-check"></i> AGENDAR AGORA
         </a>
       </div>
