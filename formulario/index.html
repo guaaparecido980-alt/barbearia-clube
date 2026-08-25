@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cadastro de Barbeiro | Barbearia Clube — Curitiba</title>
+<meta name="description" content="Formulário de cadastro para barbeiros interessados em trabalhar na Barbearia Clube, Mercês — Curitiba. Leva 2 minutos.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#080a10">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="canonical" href="https://www.barbeariaclube.com.br/formulario/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) — Google Ads + GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-385059756"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-385059756');
+  gtag('config', 'G-3FV79V0V0G');
+</script>
+
+<style>
+:root{
+  --gold:#c5a059; --gold-lt:#d9bb7b; --gold-dk:#9f7e38;
+  --black:#080a10; --dark:#0d101a; --navy:#111627;
+  --white:#fff; --gray:#e2e8f0; --muted:#94a3b8; --faint:#3f4a5e;
+  --wa:#25D366;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost',system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--black);color:var(--gray);
+  line-height:1.65;font-size:16px;overflow-x:hidden;
+  background-image:radial-gradient(circle at 50% -10%,rgba(197,160,89,.10),transparent 55%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:660px;margin:0 auto;padding:0 20px}
+
+/* ---------- Topo ---------- */
+.top{padding:26px 0 6px;text-align:center}
+.top img{height:52px;width:auto;object-fit:contain}
+.top .brand{font-family:var(--serif);font-size:22px;color:var(--white);letter-spacing:.5px;margin-top:8px}
+.top .brand span{color:var(--gold)}
+.rule{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto}
+
+/* ---------- Hero / explicação ---------- */
+.hero{text-align:center;padding:8px 0 26px}
+.eyebrow{
+  display:inline-block;font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(197,160,89,.35);border-radius:999px;
+  padding:7px 16px;margin-bottom:16px
+}
+h1{font-family:var(--serif);font-size:clamp(28px,7vw,40px);color:var(--white);line-height:1.15;font-weight:700}
+h1 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--muted);margin-top:14px;font-size:16px}
+
+.card{
+  background:linear-gradient(180deg,var(--navy),var(--dark));
+  border:1px solid rgba(197,160,89,.18);border-radius:16px;
+  padding:22px;margin:18px 0
+}
+.card h2{
+  font-family:var(--serif);font-size:19px;color:var(--white);margin-bottom:4px;
+  display:flex;align-items:center;gap:9px
+}
+.card h2 i{color:var(--gold);font-style:normal;font-size:16px}
+.howto{list-style:none;margin-top:14px;display:grid;gap:13px}
+.howto li{display:flex;gap:13px;align-items:flex-start;font-size:15px;color:var(--gray)}
+.howto b{color:var(--white);font-weight:500}
+.num{
+  flex:none;width:26px;height:26px;border-radius:50%;
+  background:rgba(197,160,89,.14);border:1px solid rgba(197,160,89,.45);
+  color:var(--gold);font-size:13px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;margin-top:1px
+}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.fact{
+  flex:1;min-width:150px;background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);border-radius:11px;padding:12px 14px
+}
+.fact .k{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+.fact .v{color:var(--white);font-size:15px;font-weight:500;margin-top:2px}
+.note{
+  font-size:13.5px;color:var(--muted);border-left:2px solid var(--gold-dk);
+  padding-left:12px;margin-top:16px
+}
+
+/* ---------- Progresso ---------- */
+.progress{position:sticky;top:0;z-index:20;background:rgba(8,10,16,.94);backdrop-filter:blur(10px);
+  padding:14px 0 12px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
+.pbar{height:4px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}
+.pfill{height:100%;width:25%;background:linear-gradient(90deg,var(--gold-dk),var(--gold-lt));
+  border-radius:99px;transition:width .35s ease}
+.pmeta{display:flex;justify-content:space-between;align-items:center;margin-top:9px;
+  font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.pmeta strong{color:var(--gold);font-weight:600}
+
+/* ---------- Formulário ---------- */
+.step{display:none;animation:fade .35s ease}
+.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.step-title{font-family:var(--serif);font-size:23px;color:var(--white);margin-bottom:4px}
+.step-sub{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+
+.q{margin-bottom:26px}
+.lbl{display:block;font-size:15.5px;color:var(--white);font-weight:500;margin-bottom:4px}
+.hint{display:block;font-size:13px;color:var(--muted);margin-bottom:11px}
+.req{color:var(--gold);font-size:13px}
+
+input[type=text],input[type=tel],textarea{
+  width:100%;background:rgba(255,255,255,.04);color:var(--white);
+  border:1px solid rgba(255,255,255,.12);border-radius:11px;
+  padding:14px 15px;font-family:var(--sans);font-size:16px;transition:.2s
+}
+input::placeholder,textarea::placeholder{color:var(--faint)}
+input:focus,textarea:focus{outline:none;border-color:var(--gold);background:rgba(197,160,89,.06)}
+textarea{resize:vertical;min-height:92px}
+
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;width:0;height:0}
+.chip span{
+  display:block;padding:11px 16px;border-radius:11px;font-size:14.5px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);
+  color:var(--gray);transition:.18s;user-select:none
+}
+.chip input:checked+span{
+  background:rgba(197,160,89,.16);border-color:var(--gold);color:var(--gold-lt);font-weight:500;
+  box-shadow:0 0 0 1px rgba(197,160,89,.4)
+}
+.chip input:focus-visible+span{border-color:var(--gold)}
+.chips.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+@media(max-width:420px){.chips.grid{grid-template-columns:1fr}}
+.chips.grid .chip span{text-align:center}
+
+.err{color:#f87171;font-size:13px;margin-top:9px;display:none}
+.err.on{display:block}
+.q.invalid input,.q.invalid textarea{border-color:#f87171}
+
+/* ---------- Botões ---------- */
+.nav{display:flex;gap:11px;margin:6px 0 40px}
+.btn{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:9px;
+  padding:16px 20px;border-radius:12px;border:none;cursor:pointer;
+  font-family:var(--sans);font-size:15.5px;font-weight:500;letter-spacing:.4px;transition:.2s;
+  text-decoration:none
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold-dk),var(--gold-lt));color:#1a1206;font-weight:600}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--gray);flex:0 0 42%}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-wa{background:var(--wa);color:#04310f;font-weight:600;font-size:16.5px;padding:18px 20px;width:100%}
+.btn-wa:hover{filter:brightness(1.08)}
+.btn-mini{
+  background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--muted);
+  padding:11px 16px;border-radius:10px;font-size:13.5px;cursor:pointer;font-family:var(--sans)
+}
+.btn-mini:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ---------- Revisão ---------- */
+.review{display:grid;gap:0;margin:6px 0 8px}
+.rrow{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.rrow:last-child{border-bottom:none}
+.rk{color:var(--muted);font-size:13.5px;flex:0 0 44%}
+.rv{color:var(--white);font-size:14.5px;text-align:right;flex:1}
+.rv.empty{color:var(--faint)}
+
+/* ---------- Sucesso ---------- */
+#done{display:none;text-align:center;padding:14px 0 40px}
+#done.on{display:block;animation:fade .4s ease}
+.check{
+  width:74px;height:74px;border-radius:50%;margin:0 auto 18px;
+  background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.5);
+  display:flex;align-items:center;justify-content:center;font-size:34px;color:var(--wa)
+}
+footer{
+  text-align:center;padding:26px 0 40px;color:var(--faint);font-size:12.5px;
+  border-top:1px solid rgba(255,255,255,.06)
+}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============ TOPO ============ -->
+  <div class="top">
+    <a href="../" aria-label="Barbearia Clube — site">
+      <img src="../logo.png" alt="Barbearia Clube" onerror="this.style.display='none'">
+    </a>
+    <div class="brand">Barbearia <span>Clube</span></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- ============ APRESENTAÇÃO ============ -->
+  <section class="hero" id="intro">
+    <span class="eyebrow">Cadastro Profissional</span>
+    <h1>Trabalhe na <em>Barbearia Clube</em></h1>
+    <p class="lead">
+      Somos referência em Curitiba desde 2007, nas Mercês. Este é o cadastro oficial
+      para barbeiros que querem fazer parte da nossa equipe — leva
+      <strong style="color:var(--white)">menos de 2 minutos</strong>.
+    </p>
+
+    <div class="card" style="text-align:left">
+      <h2><i>&#9670;</i> Como funciona</h2>
+      <ul class="howto">
+        <li><span class="num">1</span><span><b>Responda as perguntas abaixo.</b> São 4 etapas curtas — na maioria é só tocar na opção certa. Apenas o nome e o WhatsApp precisam ser digitados.</span></li>
+        <li><span class="num">2</span><span><b>Confira o resumo no final.</b> Você vê tudo o que respondeu antes de enviar e pode voltar para corrigir.</span></li>
+        <li><span class="num">3</span><span><b>Toque em “Enviar no WhatsApp”.</b> A conversa com a barbearia abre <b>já com suas respostas escritas</b> — você só aperta o botão de enviar do WhatsApp. <b>Sem esse último toque, não recebemos nada.</b></span></li>
+        <li><span class="num">4</span><span><b>Aguarde nosso retorno.</b> Lemos cada cadastro e respondemos pelo mesmo WhatsApp. Se o perfil combinar, chamamos para uma conversa e um teste prático na cadeira.</span></li>
+      </ul>
+
+      <div class="facts">
+        <div class="fact"><div class="k">Tempo</div><div class="v">≈ 2 minutos</div></div>
+        <div class="fact"><div class="k">Local</div><div class="v">Mercês, Curitiba</div></div>
+        <div class="fact"><div class="k">Retorno</div><div class="v">Pelo WhatsApp</div></div>
+      </div>
+
+      <p class="note">
+        Responda com sinceridade — não existe resposta errada. Queremos entender o seu momento
+        e o seu jeito de trabalhar. Seus dados são usados apenas para esse contato e não são
+        compartilhados com terceiros.
+      </p>
+    </div>
+
+    <button class="btn btn-gold" id="start" style="width:100%">Começar cadastro &nbsp;&#8594;</button>
+  </section>
+
+  <!-- ============ FORMULÁRIO ============ -->
+  <div id="formArea" style="display:none">
+
+    <div class="progress">
+      <div class="pbar"><div class="pfill" id="pfill"></div></div>
+      <div class="pmeta">
+        <span id="pstep">Etapa 1 de 4</span>
+        <strong id="pname">Você</strong>
+      </div>
+    </div>
+
+    <form id="form" novalidate>
+
+      <!-- ---------- ETAPA 1 ---------- -->
+      <section class="step on" data-name="Você">
+        <h2 class="step-title">Quem é você</h2>
+        <p class="step-sub">Para sabermos com quem estamos falando e como te responder.</p>
+
+        <div class="q" data-req>
+          <label class="lbl" for="nome">Nome completo <span class="req">*</span></label>
+          <span class="hint">Como está no seu documento.</span>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: João Pedro da Silva" autocomplete="name">
+          <div class="err">Preencha seu nome completo.</div>
+        </div>
+
+        <div class="q" data-req>
+          <label class="lbl" for="whats">Seu WhatsApp <span class="req">*</span></label>
+          <span class="hint">Com DDD. É por aqui que vamos te responder.</span>
+          <input type="tel" id="whats" name="whats" placeholder="(41) 99999-9999" inputmode="numeric" autocomplete="tel">
+          <div class="err">Digite um número válido com DDD.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Sua idade <span class="req">*</span></span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="idade" value="18 a 24 anos"><span>18 a 24 anos</span></label>
+            <label class="chip"><input type="radio" name="idade" value="25 a 34 anos"><span>25 a 34 anos</span></label>
+            <label class="chip"><input type="radio" name="idade" value="35 a 44 anos"><span>35 a 44 anos</span></label>
+            <label class="chip"><input type="radio" name="idade" value="45 anos ou mais"><span>45 anos ou mais</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Onde você mora hoje? <span class="req">*</span></span>
+          <span class="hint">A barbearia fica nas Mercês — queremos saber quanto tempo você leva até aqui.</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="mora" value="Mercês / Centro / Bigorrilho (perto da barbearia)"><span>Mercês, Centro ou Bigorrilho</span></label>
+            <label class="chip"><input type="radio" name="mora" value="Outro bairro de Curitiba"><span>Outro bairro de Curitiba</span></label>
+            <label class="chip"><input type="radio" name="mora" value="Região metropolitana"><span>Região metropolitana</span></label>
+            <label class="chip"><input type="radio" name="mora" value="Outra cidade"><span>Outra cidade</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q">
+          <label class="lbl" for="insta">Instagram do seu trabalho</label>
+          <span class="hint">Opcional, mas ajuda muito — é onde vemos os seus cortes.</span>
+          <input type="text" id="insta" name="insta" placeholder="@seuperfil" autocapitalize="none">
+        </div>
+      </section>
+
+      <!-- ---------- ETAPA 2 ---------- -->
+      <section class="step" data-name="Experiência">
+        <h2 class="step-title">Sua experiência</h2>
+        <p class="step-sub">Toque na opção que mais combina com o seu momento hoje.</p>
+
+        <div class="q" data-req>
+          <span class="lbl">Há quanto tempo você trabalha como barbeiro? <span class="req">*</span></span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="tempo" value="Menos de 1 ano"><span>Menos de 1 ano</span></label>
+            <label class="chip"><input type="radio" name="tempo" value="1 a 3 anos"><span>1 a 3 anos</span></label>
+            <label class="chip"><input type="radio" name="tempo" value="3 a 5 anos"><span>3 a 5 anos</span></label>
+            <label class="chip"><input type="radio" name="tempo" value="5 a 10 anos"><span>5 a 10 anos</span></label>
+            <label class="chip"><input type="radio" name="tempo" value="Mais de 10 anos"><span>Mais de 10 anos</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Onde você atende atualmente? <span class="req">*</span></span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="onde" value="Em uma barbearia (contratado)"><span>Em uma barbearia (contratado)</span></label>
+            <label class="chip"><input type="radio" name="onde" value="Alugo cadeira / sou parceiro"><span>Alugo cadeira / parceiro</span></label>
+            <label class="chip"><input type="radio" name="onde" value="Autônomo — atendo em casa ou a domicílio"><span>Autônomo, em casa ou a domicílio</span></label>
+            <label class="chip"><input type="radio" name="onde" value="Estou fora do mercado no momento"><span>Estou parado no momento</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Você tem clientela própria? <span class="req">*</span></span>
+          <span class="hint">Clientes que procuram você pelo nome.</span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="clientela" value="Sim, mais de 30 clientes fiéis"><span>Sim — 30+ fiéis</span></label>
+            <label class="chip"><input type="radio" name="clientela" value="Sim, entre 10 e 30 clientes"><span>Sim — 10 a 30</span></label>
+            <label class="chip"><input type="radio" name="clientela" value="Pequena, até 10 clientes"><span>Pequena — até 10</span></label>
+            <label class="chip"><input type="radio" name="clientela" value="Ainda não tenho"><span>Ainda não tenho</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Quantos clientes você atende por dia hoje? <span class="req">*</span></span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="porDia" value="Até 4 por dia"><span>Até 4</span></label>
+            <label class="chip"><input type="radio" name="porDia" value="5 a 8 por dia"><span>5 a 8</span></label>
+            <label class="chip"><input type="radio" name="porDia" value="9 a 12 por dia"><span>9 a 12</span></label>
+            <label class="chip"><input type="radio" name="porDia" value="Mais de 12 por dia"><span>Mais de 12</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+      </section>
+
+      <!-- ---------- ETAPA 3 ---------- -->
+      <section class="step" data-name="Técnica">
+        <h2 class="step-title">O que você domina</h2>
+        <p class="step-sub">Marque só o que você faz com segurança em um cliente pagante, hoje.</p>
+
+        <div class="q" data-req>
+          <span class="lbl">Serviços que você executa bem <span class="req">*</span></span>
+          <span class="hint">Pode marcar quantos quiser.</span>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="servicos" value="Corte na tesoura"><span>Corte na tesoura</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Degradê / máquina"><span>Degradê / máquina</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Barba na navalha com toalha quente"><span>Barba na navalha (toalha quente)</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Visagismo (corte pelo formato do rosto)"><span>Visagismo</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Pigmentação / desenho"><span>Pigmentação / desenho</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Coloração e luzes"><span>Coloração e luzes</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Alisamento / relaxamento"><span>Alisamento / relaxamento</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Sobrancelha"><span>Sobrancelha</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Penteado e Dia do Noivo"><span>Penteado / Dia do Noivo</span></label>
+            <label class="chip"><input type="checkbox" name="servicos" value="Corte infantil"><span>Corte infantil</span></label>
+          </div>
+          <div class="err">Marque pelo menos um serviço.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Você tem suas próprias ferramentas? <span class="req">*</span></span>
+          <span class="hint">Máquina, tesoura, navalha, secador.</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="ferramentas" value="Sim, completas"><span>Sim, completas</span></label>
+            <label class="chip"><input type="radio" name="ferramentas" value="Tenho parte do material"><span>Tenho parte</span></label>
+            <label class="chip"><input type="radio" name="ferramentas" value="Ainda não tenho"><span>Ainda não tenho</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Tem curso ou certificação na área? <span class="req">*</span></span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="curso" value="Sim, vários cursos"><span>Sim, vários</span></label>
+            <label class="chip"><input type="radio" name="curso" value="Sim, um curso"><span>Sim, um</span></label>
+            <label class="chip"><input type="radio" name="curso" value="Não — aprendi na prática"><span>Não, aprendi na prática</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+      </section>
+
+      <!-- ---------- ETAPA 4 ---------- -->
+      <section class="step" data-name="Disponibilidade">
+        <h2 class="step-title">Disponibilidade</h2>
+        <p class="step-sub">Última etapa. Depois dela você confere tudo antes de enviar.</p>
+
+        <div class="q" data-req>
+          <span class="lbl">Qual a sua disponibilidade? <span class="req">*</span></span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="disp" value="Integral (segunda a sábado)"><span>Integral (seg a sáb)</span></label>
+            <label class="chip"><input type="radio" name="disp" value="Meio período"><span>Meio período</span></label>
+            <label class="chip"><input type="radio" name="disp" value="Apenas alguns dias da semana"><span>Alguns dias da semana</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Pode trabalhar aos sábados? <span class="req">*</span></span>
+          <span class="hint">Sábado é o dia mais movimentado da casa.</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="sabado" value="Sim, sem problema"><span>Sim, sem problema</span></label>
+            <label class="chip"><input type="radio" name="sabado" value="Sim, mas só em alguns sábados"><span>Alguns sábados</span></label>
+            <label class="chip"><input type="radio" name="sabado" value="Não posso aos sábados"><span>Não posso</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Modelo de trabalho que você procura <span class="req">*</span></span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="modelo" value="Comissão"><span>Comissão</span></label>
+            <label class="chip"><input type="radio" name="modelo" value="Aluguel de cadeira"><span>Aluguel de cadeira</span></label>
+            <label class="chip"><input type="radio" name="modelo" value="CLT / registrado"><span>CLT (registrado)</span></label>
+            <label class="chip"><input type="radio" name="modelo" value="Aberto a conversar"><span>Aberto a conversar</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Quando poderia começar? <span class="req">*</span></span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="inicio" value="Imediatamente"><span>Imediatamente</span></label>
+            <label class="chip"><input type="radio" name="inicio" value="Em até 15 dias"><span>Em até 15 dias</span></label>
+            <label class="chip"><input type="radio" name="inicio" value="Em até 30 dias"><span>Em até 30 dias</span></label>
+            <label class="chip"><input type="radio" name="inicio" value="Só estou me informando por enquanto"><span>Só me informando</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q">
+          <label class="lbl" for="porque">Por que você quer trabalhar na Barbearia Clube?</label>
+          <span class="hint">Opcional. Duas ou três linhas já bastam — escreva do seu jeito.</span>
+          <textarea id="porque" name="porque" maxlength="400" placeholder="Ex.: Acompanho o trabalho de vocês há um tempo e quero crescer numa casa com estrutura e clientela fiel."></textarea>
+        </div>
+      </section>
+
+      <!-- ---------- REVISÃO ---------- -->
+      <section class="step" data-name="Revisão">
+        <h2 class="step-title">Confira antes de enviar</h2>
+        <p class="step-sub">Está tudo certo? Se precisar corrigir, é só voltar.</p>
+
+        <div class="card">
+          <div class="review" id="review"></div>
+        </div>
+
+        <div class="card" style="border-color:rgba(37,211,102,.3)">
+          <h2><i>&#9670;</i> Último passo — importante</h2>
+          <p style="font-size:14.5px;color:var(--gray);margin-top:8px">
+            Ao tocar no botão verde, o <b style="color:var(--white)">WhatsApp da Barbearia Clube abre com todas as
+            suas respostas já escritas</b>. Você só precisa apertar o botão de enviar lá dentro.
+            <b style="color:var(--white)">Enquanto você não enviar a mensagem, seu cadastro não chega até nós.</b>
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-wa" id="send">&#10004;&nbsp; Enviar no WhatsApp</button>
+        <div style="text-align:center;margin-top:12px">
+          <button type="button" class="btn-mini" id="copy">Copiar respostas em texto</button>
+        </div>
+      </section>
+
+      <!-- ---------- NAVEGAÇÃO ---------- -->
+      <div class="nav">
+        <button type="button" class="btn btn-ghost" id="back">&#8592; Voltar</button>
+        <button type="button" class="btn btn-gold" id="next">Continuar &#8594;</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ============ SUCESSO ============ -->
+  <section id="done">
+    <div class="check">&#10004;</div>
+    <h2 class="step-title" style="font-size:26px">WhatsApp aberto</h2>
+    <p class="lead" style="margin-top:10px">
+      Confira se a mensagem com as suas respostas apareceu na conversa e
+      <b style="color:var(--white)">aperte o botão de enviar</b>. Sem esse toque final, o cadastro não chega até nós.
+    </p>
+    <div class="card" style="text-align:left">
+      <h2><i>&#9670;</i> E agora?</h2>
+      <ul class="howto">
+        <li><span class="num">1</span><span>Nossa equipe lê o seu cadastro e responde <b>pelo mesmo WhatsApp</b>.</span></li>
+        <li><span class="num">2</span><span>Se o perfil combinar com a casa, chamamos para uma <b>conversa e um teste prático</b> na cadeira.</span></li>
+        <li><span class="num">3</span><span>Enquanto isso, dá uma olhada na barbearia — estrutura, equipe e serviços.</span></li>
+      </ul>
+    </div>
+    <a href="../" class="btn btn-gold" style="width:100%">Conhecer a Barbearia Clube</a>
+    <div style="margin-top:12px">
+      <button type="button" class="btn-mini" id="again">Não abriu? Tentar enviar de novo</button>
+    </div>
+  </section>
+
+  <footer>
+    Barbearia Clube — Rua Jacarezinho, 21 · Mercês, Curitiba/PR<br>
+    <a href="tel:+554130149413">(41) 3014-9413</a> &nbsp;·&nbsp;
+    <a href="../">barbeariaclube.com.br</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var WHATS  = '554130149413';
+  var form   = document.getElementById('form');
+  var steps  = Array.prototype.slice.call(form.querySelectorAll('.step'));
+  var i      = 0;
+  var pfill  = document.getElementById('pfill');
+  var pstep  = document.getElementById('pstep');
+  var pname  = document.getElementById('pname');
+  var btnB   = document.getElementById('back');
+  var btnN   = document.getElementById('next');
+  var KEY    = 'bc_form_barbeiro';
+
+  /* ---- rótulos usados na revisão e na mensagem ---- */
+  var LABELS = [
+    ['nome',        'Nome'],
+    ['whats',       'WhatsApp'],
+    ['idade',       'Idade'],
+    ['mora',        'Mora em'],
+    ['insta',       'Instagram'],
+    ['tempo',       'Tempo de profissão'],
+    ['onde',        'Atende hoje'],
+    ['clientela',   'Clientela própria'],
+    ['porDia',      'Clientes por dia'],
+    ['servicos',    'Serviços que domina'],
+    ['ferramentas', 'Ferramentas próprias'],
+    ['curso',       'Curso / certificação'],
+    ['disp',        'Disponibilidade'],
+    ['sabado',      'Sábados'],
+    ['modelo',      'Modelo de trabalho'],
+    ['inicio',      'Pode começar'],
+    ['porque',      'Por que a Barbearia Clube']
+  ];
+
+  /* ---- máscara de telefone ---- */
+  var tel = document.getElementById('whats');
+  tel.addEventListener('input', function(){
+    var v = this.value.replace(/\D/g,'').slice(0,11);
+    if (v.length > 6)      this.value = '(' + v.slice(0,2) + ') ' + v.slice(2, v.length-4) + '-' + v.slice(-4);
+    else if (v.length > 2) this.value = '(' + v.slice(0,2) + ') ' + v.slice(2);
+    else if (v.length > 0) this.value = '(' + v;
+    else                   this.value = '';
+  });
+
+  /* ---- leitura de valores ---- */
+  function get(name){
+    var el = form.querySelector('[name="'+name+'"]');
+    if(!el) return '';
+    if (el.type === 'checkbox'){
+      var vals = [];
+      Array.prototype.forEach.call(form.querySelectorAll('[name="'+name+'"]:checked'), function(c){ vals.push(c.value); });
+      return vals.join(', ');
+    }
+    if (el.type === 'radio'){
+      var c = form.querySelector('[name="'+name+'"]:checked');
+      return c ? c.value : '';
+    }
+    return el.value.trim();
+  }
+
+  /* ---- rascunho (sobrevive a fechar a página) ---- */
+  function save(){
+    try{
+      var d = {};
+      LABELS.forEach(function(p){ d[p[0]] = get(p[0]); });
+      localStorage.setItem(KEY, JSON.stringify(d));
+    }catch(e){}
+  }
+  function restore(){
+    try{
+      var raw = localStorage.getItem(KEY); if(!raw) return;
+      var d = JSON.parse(raw);
+      Object.keys(d).forEach(function(k){
+        var v = d[k]; if(!v) return;
+        var list = form.querySelectorAll('[name="'+k+'"]');
+        if(!list.length) return;
+        if (list[0].type === 'radio' || list[0].type === 'checkbox'){
+          var chosen = v.split(', ');
+          Array.prototype.forEach.call(list, function(el){
+            if (chosen.indexOf(el.value) !== -1) el.checked = true;
+          });
+        } else {
+          list[0].value = v;
+        }
+      });
+    }catch(e){}
+  }
+  form.addEventListener('input',  save);
+  form.addEventListener('change', save);
+
+  /* ---- validação da etapa ---- */
+  function validate(idx){
+    var ok = true;
+    Array.prototype.forEach.call(steps[idx].querySelectorAll('.q[data-req]'), function(q){
+      var err   = q.querySelector('.err');
+      var input = q.querySelector('input[type=text],input[type=tel],textarea');
+      var bad;
+      if (input){
+        var v = input.value.trim();
+        if (input.id === 'nome')       bad = v.length < 5 || v.indexOf(' ') === -1;
+        else if (input.id === 'whats') bad = v.replace(/\D/g,'').length < 10;
+        else                           bad = !v;
+      } else {
+        bad = !q.querySelector('input:checked');
+      }
+      q.classList.toggle('invalid', bad);
+      if (err) err.classList.toggle('on', bad);
+      if (bad && ok) (input || q).scrollIntoView({behavior:'smooth', block:'center'});
+      if (bad) ok = false;
+    });
+    return ok;
+  }
+
+  /* ---- navegação ---- */
+  function show(n){
+    steps[i].classList.remove('on');
+    i = n;
+    steps[i].classList.add('on');
+    var total = steps.length;
+    pfill.style.width = Math.round(((i+1)/total)*100) + '%';
+    pstep.textContent = (i === total-1) ? 'Revisão final' : 'Etapa ' + (i+1) + ' de ' + (total-1);
+    pname.textContent = steps[i].getAttribute('data-name');
+    btnB.style.display = (i === 0)       ? 'none' : 'flex';
+    btnN.style.display = (i === total-1) ? 'none' : 'flex';
+    if (i === total-1) buildReview();
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  btnN.addEventListener('click', function(){ if (validate(i)) show(i+1); });
+  btnB.addEventListener('click', function(){ if (i > 0) show(i-1); });
+
+  document.getElementById('start').addEventListener('click', function(){
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('formArea').style.display = 'block';
+    restore();
+    show(0);
+  });
+
+  /* ---- revisão ---- */
+  function buildReview(){
+    var box = document.getElementById('review');
+    box.innerHTML = '';
+    LABELS.forEach(function(p){
+      var v   = get(p[0]);
+      var row = document.createElement('div'); row.className = 'rrow';
+      var k   = document.createElement('div'); k.className   = 'rk';
+      k.textContent = p[1];
+      var val = document.createElement('div');
+      val.className   = 'rv' + (v ? '' : ' empty');
+      val.textContent = v || 'não informado';
+      row.appendChild(k); row.appendChild(val); box.appendChild(row);
+    });
+  }
+
+  /* ---- mensagem final ---- */
+  function buildText(){
+    var L = ['*CADASTRO DE BARBEIRO — BARBEARIA CLUBE*', ''];
+    LABELS.forEach(function(p){
+      var v = get(p[0]);
+      if (v) L.push('*' + p[1] + ':* ' + v);
+    });
+    L.push('');
+    L.push('_Enviado pelo formulário do site barbeariaclube.com.br/formulario_');
+    return L.join('\n');
+  }
+  function waLink(){
+    return 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(buildText());
+  }
+
+  document.getElementById('send').addEventListener('click', function(){
+    try{
+      if (typeof gtag === 'function'){
+        gtag('event','generate_lead',{event_category:'formulario_barbeiro',event_label:'whatsapp'});
+      }
+    }catch(e){}
+    window.open(waLink(), '_blank', 'noopener');
+    document.getElementById('formArea').style.display = 'none';
+    document.getElementById('done').classList.add('on');
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  document.getElementById('again').addEventListener('click', function(){
+    window.open(waLink(), '_blank', 'noopener');
+  });
+
+  document.getElementById('copy').addEventListener('click', function(){
+    var btn = this, txt = buildText();
+    function ok(){ btn.textContent = 'Copiado!'; setTimeout(function(){ btn.textContent = 'Copiar respostas em texto'; }, 2200); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); }catch(e){}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(ok, fallback);
+    } else fallback();
+  });
+
+  /* ---- Enter avança ---- */
+  form.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA'){
+      e.preventDefault();
+      if (i < steps.length-1 && validate(i)) show(i+1);
+    }
+  });
+})();
+</script>
+</body>
+</html>
