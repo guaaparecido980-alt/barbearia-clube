@@ -349,6 +349,32 @@ footer a:hover{color:var(--gold)}
           </div>
           <div class="err">Escolha uma opção.</div>
         </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Quanto você cobra hoje pelo corte? <span class="req">*</span></span>
+          <span class="hint">O valor do corte simples, sem barba, que o cliente paga na sua mão.</span>
+          <div class="chips grid">
+            <label class="chip"><input type="radio" name="preco" value="Menos de R$ 50"><span>Menos de R$ 50</span></label>
+            <label class="chip"><input type="radio" name="preco" value="R$ 50 a R$ 80"><span>R$ 50 a R$ 80</span></label>
+            <label class="chip"><input type="radio" name="preco" value="R$ 80 a R$ 110"><span>R$ 80 a R$ 110</span></label>
+            <label class="chip"><input type="radio" name="preco" value="R$ 110 a R$ 150"><span>R$ 110 a R$ 150</span></label>
+            <label class="chip"><input type="radio" name="preco" value="Acima de R$ 150"><span>Acima de R$ 150</span></label>
+            <label class="chip"><input type="radio" name="preco" value="Não cobro direto — recebo comissão"><span>Recebo comissão</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
+
+        <div class="q" data-req>
+          <span class="lbl">Você trabalha com plano de assinatura? <span class="req">*</span></span>
+          <span class="hint">Mensalidade, clube ou pacote fechado. Aqui na Clube o atendimento é sempre corte avulso — perguntamos só para entender de onde você vem.</span>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="assinatura" value="Sim — boa parte da minha clientela é de plano"><span>Sim, boa parte da clientela</span></label>
+            <label class="chip"><input type="radio" name="assinatura" value="Sim — mas poucos clientes"><span>Sim, mas poucos</span></label>
+            <label class="chip"><input type="radio" name="assinatura" value="Não — só corte avulso"><span>Não, só corte avulso</span></label>
+            <label class="chip"><input type="radio" name="assinatura" value="Nunca trabalhei, mas tenho interesse"><span>Nunca, mas tenho interesse</span></label>
+          </div>
+          <div class="err">Escolha uma opção.</div>
+        </div>
       </section>
 
       <!-- ---------- ETAPA 3 ---------- -->
@@ -537,6 +563,8 @@ footer a:hover{color:var(--gold)}
     ['onde',        'Atende hoje'],
     ['clientela',   'Clientela própria'],
     ['porDia',      'Clientes por dia'],
+    ['preco',       'Cobra pelo corte'],
+    ['assinatura',  'Trabalha com assinatura'],
     ['servicos',    'Serviços que domina'],
     ['ferramentas', 'Ferramentas próprias'],
     ['curso',       'Curso / certificação'],
